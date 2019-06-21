@@ -1,0 +1,270 @@
+@import utils/libs
+@import utils/vars
+@import utils/mixins
+@import utils/fonts
+
+html
+  height: 100%
+  @include fluid-type($min_width, $max_width, $min_font, $max_font)
+body
+  height: 100%
+  color: $text
+h1, h2, h3, h4, h5, h6
+  margin: 0
+.subtitle
+  font-size: 14px
+  text-transform: uppercase
+  font-weight: 500
+
+.text-big
+  font-size: 25px
+
+ul, li
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none
+
+p
+  margin-bottom: 1.875rem
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+textarea
+  vertical-align: middle
+
+textarea
+  resize: none
+
+section
+  position: relative
+
+input,
+select,
+button
+  outline: none
+
+*, *:before, *:after
+  box-sizing: border-box
+
+.wrapper
+  display: flex
+  flex-direction: column
+  height: 100%
+
+.content
+  flex: 1 0 auto
+
+section
+  padding: 65px 0
+
+.section-title.text-white
+  &:before
+    background-color: #fff
+.section-title.section-title--center
+  justify-content: center
+  &:before
+    left: 0
+    right: 0
+    margin: auto
+.section-title
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  margin-bottom: 4.375rem
+  &:before
+    content: ''
+    position: absolute
+    bottom: -20px
+    width: 12.875rem
+    height: 2px
+    left: 0
+    background-color: $text
+
+.svg-sprite-icon
+  height: 100%
+  width: 100%
+
+.banner-slider
+  position: relative
+  .swiper-button-next
+    top: 100px
+    bottom: 0
+    right: 10%
+    margin: auto
+    background-image: none
+    .icon-arrow-right--main
+      width: 63px
+      height: 63px
+      fill: #fff
+.banner-slide
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 100
+    background: linear-gradient(180deg, #1A2040 0%, rgba(0, 0, 0, 0) 30.81%), linear-gradient(90deg, #15162D 0%, rgba(0, 0, 0, 0) 43.41%)
+    mix-blend-mode: multiply
+  background-size: cover
+  position: relative
+.banner-slide__content
+  padding-top: 8.75rem
+  z-index: 300
+.banner-slide__title
+  margin-bottom: 23px
+.banner-slide__text
+    max-width: 33.3125rem
+    margin-bottom: 3.4375rem
+    
+.catalog-slider
+.catalog-slide
+  &:before
+    content: ''
+    position: absolute
+    background: linear-gradient(0deg, rgba(12, 13, 41, 0.79) 0.02%, rgba(12, 13, 41, 0) 93.06%)
+    z-index: 50
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+  position: relative
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  padding: 30px
+  &__title
+    z-index: 50
+    position: relative
+.catalog-slide__title
+  display: flex
+  align-items: flex-end
+  height: 100%
+  font-weight: 300
+  font-size: 1.875rem
+  text-align: left
+  width: 50%
+  line-height: 2.25rem
+  color: #fff
+
+.section-recommended
+.recommended-item
+  box-shadow: 0px 0px 14px rgba(36, 40, 58, 0.1)
+.recommended-item.active
+  &:before
+    content: 'хит'
+    position: absolute
+    width: 3.75rem
+    height: 3.75rem
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $yellow
+    top: 0.625rem
+    left: 0.625rem
+    z-index: 50
+    font-weight: 500
+    text-transform: uppercase
+.recommended-item-wrapper
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+.recommended-item__photo
+  background-size: contain
+  background-position: center
+  background-repeat: no-repeat
+.recommended-item-desc
+  padding: 0.625rem 1.5rem
+  flex: 1 1 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+.recommended-item-price
+  font-size: 2.5rem
+  font-weight: 500
+.recommended-item-cur
+  font-size: 1.125rem
+  font-weight: 500
+.section-advantages
+  background-color: $text
+  background-image: url(../images/general/bg-dark.png)
+
+.section-advantages
+  padding: 9.375rem 0 11.25rem
+  .section-title
+    margin-bottom: 9.375rem
+.advantage-item
+  cursor: pointer
+  display: flex
+  align-items: center
+  border: 2px solid transparent!important
+  flex-direction: column
+  transition: .3s ease
+  padding: 1.25rem 0.625rem
+  &__icon
+    width: 97px
+    height: 97px
+    border-radius: 50%
+    background-color: #fff
+    display: flex
+    justify-content: center
+    margin-bottom: 20px
+
+    & > svg
+      width: 50%
+  &__title
+    text-align: center
+  &:hover
+    border: 2px solid #fff!important
+
+.section-about-us
+  padding-top: 6.25rem
+  padding-bottom: 1.875rem
+.about-us__content
+  box-shadow: 0px 0px 14px rgba(36, 40, 58, 0.1)
+.about-us__text
+  padding: 2rem
+.about-photo
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+
+.section-reviews
+  padding-bottom: 8.125rem
+.review-item
+  padding: 2.9375rem 1.875rem
+  box-shadow: 0px 0px 14px rgba(36, 40, 58, 0.1)
+  &__header
+    position: relative
+    display: flex
+    align-items: center
+    margin-bottom: 70px
+    &:before
+      content: ''
+      position: absolute
+      width: 116px
+      left: 0
+      background-color: $red
+      bottom: -35px
+      height: 2px
+  &__photo
+    width: 116px
+    height: 116px
+    border-radius: 50%
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+//Модули
+@import modules/modules

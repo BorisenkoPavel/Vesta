@@ -1,0 +1,244 @@
+extends template/main
+
+block variables
+  - var title = 'Главная страница'
+  - var pageClass = 'index-page'
+
+block content
+
+  section.section-banner.p-0.text-white
+    .swiper-container.banner-slider
+      .swiper-wrapper
+        .embed-responsive.embed-responsive-21by9.swiper-slide
+          .embed-responsive-item.banner-slide.d-flex.align-items-center(style={'background-image': 'url(static/images/content/povar.jpg)'})
+            .banner-slide__content.container
+              h1.banner-slide__title Ваш повар будет на высоте!
+              .banner-slide__text.text-big Профессиональное кухонное оборудование для ресторанов в наличии в Горно-Алтайске
+              .btn Узнать подробности
+        .embed-responsive.embed-responsive-21by9.swiper-slide
+          .embed-responsive-item.banner-slide.d-flex.align-items-center(style={'background-image': 'url(static/images/content/povar2.jpg)'})
+            .banner-slide__content.container
+              h1.banner-slide__title Ваш повар будет на высоте!
+              .banner-slide__text.text-big Профессиональное кухонное оборудование для ресторанов в наличии в Горно-Алтайске
+              .btn Узнать подробности
+        .embed-responsive.embed-responsive-21by9.swiper-slide
+          .embed-responsive-item.banner-slide.d-flex.align-items-center(style={'background-image': 'url(static/images/content/povar3.jpg)'})
+            .banner-slide__content.container
+              h1.banner-slide__title Ваш повар будет на высоте!
+              .banner-slide__text.text-big Профессиональное кухонное оборудование для ресторанов в наличии в Горно-Алтайске
+              .btn Узнать подробности
+      .swiper-button-next
+        +icon('arrow-right--main')
+
+  section.section-catalog
+    .container
+      .section-title
+        h1 Популярные категории
+        .section-title-btn.btn весь каталог
+      .swiper-container.main-slider.catalog-slider.text-center
+        .swiper-wrapper
+          .embed-responsive.embed-responsive-1by1.swiper-slide
+            .embed-responsive-item.catalog-slide(style={'background-image': 'url(static/images/content/catalog-item1.jpg)'})
+              .catalog-slide__title Холодильное оборудование
+          .embed-responsive.embed-responsive-1by1.swiper-slide
+            .embed-responsive-item.catalog-slide(style={'background-image': 'url(static/images/content/catalog-item2.jpg)'})
+              .catalog-slide__title Торговое оборудование
+          .embed-responsive.embed-responsive-1by1.swiper-slide
+            .embed-responsive-item.catalog-slide(style={'background-image': 'url(static/images/content/catalog-item3.jpg)'})
+              .catalog-slide__title Весовое оборудование
+          .embed-responsive.embed-responsive-1by1.swiper-slide
+            .embed-responsive-item.catalog-slide(style={'background-image': 'url(static/images/content/catalog-item1.jpg)'})
+        .swiper-navigation
+          .swiper-button-next
+            +icon('arrow-right')
+          .swiper-button-prev
+            +icon('arrow-left')
+          .swiper-pagination
+
+  section.section-recommended
+    .container
+      .section-title
+        h1 Рекомендованные товары
+        .section-title-btn.btn весь каталог
+      .recommended-slider.swiper-container.text-center
+        .swiper-wrapper.text-left
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item.active
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price 6 697 <span class="recommended-item-cur">₽/шт</span>
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec2.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price 6 697 <span class="recommended-item-cur">₽/шт</span>
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec3.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price 6 697 <span class="recommended-item-cur">₽/шт</span>
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item.active
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price 6 697 <span class="recommended-item-cur">₽/шт</span>
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec2.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price 6 697 <span class="recommended-item-cur">₽/шт</span>
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec3.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price 6 697 <span class="recommended-item-cur">₽/шт</span>
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item.active
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price 6 697 <span class="recommended-item-cur">₽/шт</span>
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec2.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price 6 697 <span class="recommended-item-cur">₽/шт</span>
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec3.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price 6 697 <span class="recommended-item-cur">₽/шт</span>
+                //- .btn
+        .swiper-navigation
+          .swiper-button-next
+            +icon('arrow-right')
+          .swiper-button-prev
+            +icon('arrow-left')
+          .swiper-pagination        
+  section.section-advantages.text-white
+    .container
+      .section-title.section-title--center.text-white
+        h1 Преимущества
+      .row.no-gutters
+        .col-3
+          .embed-responsive.embed-responsive-1by1
+              .embed-responsive-item.advantage-item
+                .advantage-item__icon
+                  +icon('advantage-price')
+                .advantage-item__title.text-big Демократические цены
+        .col-3
+          .embed-responsive.embed-responsive-1by1
+              .embed-responsive-item.advantage-item
+                .advantage-item__icon
+                  +icon('advantage-present')
+                .advantage-item__title.text-big Бесплатная доставка
+        .col-3
+          .embed-responsive.embed-responsive-1by1
+              .embed-responsive-item.advantage-item
+                .advantage-item__icon
+                  +icon('advantage-time')
+                .advantage-item__title.text-big Квалифицированные менеджеры
+        .col-3
+          .embed-responsive.embed-responsive-1by1
+              .embed-responsive-item.advantage-item
+                .advantage-item__icon
+                  +icon('advantage-catalog')
+                .advantage-item__title.text-big Более 10 000 позиции в каталоге
+                  
+  section.section-about-us
+    .container
+      .row.about-us__content.no-gutters
+        .col-6
+          .embed-responsive.embed-responsive-1by1
+              .embed-responsive-item.about-photo(style={'background-image': 'url(static/images/content/about-image.jpg)'})
+
+        .col-6
+          .container
+            .about-us__text
+              .section-title
+                h1 Наша компания
+              p Компания Веста предлагает товары для обустройства ресторана, кафе, столовых и банкетных залов. Вместе с нами вы легко сделаете пространство для ваших гостей. 
+              p Наши эксперты позаботились о том, чтобы у вас всегда был доступ к уникальному ассортименту товаров, с которыми жизнь станет значительно удобнее.
+              .btn.mt-4 Написать руководителю
+ 
+  section.section-reviews
+   .container
+      .section-title.section-title--center
+        h1 Отзывы наших клиентов
+      .swiper-container.main-slider.reviews-slider.text-center
+        .swiper-wrapper.text-left.py-2
+          .review-item.swiper-slide
+            .review-item__header
+              .review-item__photo.mr-4(style={'background-image': 'url(static/images/content/review.jpg)'})
+              .review-item__user
+                .review-item__name.text-big Анастасия
+                .review-item__company ООО «Филин»
+            .review-item__body Компания Веста предлагает товары для обустройства ресторана, кафе, столовых и банкетных залов. Вместе с нами вы легко сделаете пространство для ваших гостей. Наши эксперты позаботились о том, чтобы у вас всегда был доступ к уникальному ассортименту товаров, с которыми жизнь станет значительно удобнее.
+          .review-item.swiper-slide
+            .review-item__header
+              .review-item__photo.mr-4(style={'background-image': 'url(static/images/content/review.jpg)'})
+              .review-item__user
+                .review-item__name.text-big Анастасия
+                .review-item__company ООО «Филин»
+            .review-item__body Компания Веста предлагает товары для обустройства ресторана, кафе, столовых и банкетных залов. Вместе с нами вы легко сделаете пространство для ваших гостей. Наши эксперты позаботились о том, чтобы у вас всегда был доступ к уникальному ассортименту товаров, с которыми жизнь станет значительно удобнее.
+          .review-item.swiper-slide
+            .review-item__header
+              .review-item__photo.mr-4(style={'background-image': 'url(static/images/content/review.jpg)'})
+              .review-item__user
+                .review-item__name.text-big Анастасия
+                .review-item__company ООО «Филин»
+            .review-item__body Компания Веста предлагает товары для обустройства ресторана, кафе, столовых и банкетных залов. Вместе с нами вы легко сделаете пространство для ваших гостей. Наши эксперты позаботились о том, чтобы у вас всегда был доступ к уникальному ассортименту товаров, с которыми жизнь станет значительно удобнее.
+          .review-item.swiper-slide
+            .review-item__header
+              .review-item__photo.mr-4(style={'background-image': 'url(static/images/content/review.jpg)'})
+              .review-item__user
+                .review-item__name.text-big Анастасия
+                .review-item__company ООО «Филин»
+            .review-item__body Компания Веста предлагает товары для обустройства ресторана, кафе, столовых и банкетных залов. Вместе с нами вы легко сделаете пространство для ваших гостей. Наши эксперты позаботились о том, чтобы у вас всегда был доступ к уникальному ассортименту товаров, с которыми жизнь станет значительно удобнее.
+          .review-item.swiper-slide
+            .review-item__header
+              .review-item__photo.mr-4(style={'background-image': 'url(static/images/content/review.jpg)'})
+              .review-item__user
+                .review-item__name.text-big Анастасия
+                .review-item__company ООО «Филин»
+            .review-item__body Компания Веста предлагает товары для обустройства ресторана, кафе, столовых и банкетных залов. Вместе с нами вы легко сделаете пространство для ваших гостей. Наши эксперты позаботились о том, чтобы у вас всегда был доступ к уникальному ассортименту товаров, с которыми жизнь станет значительно удобнее.
+        .swiper-navigation
+          .swiper-button-next
+            +icon('arrow-right')
+          .swiper-button-prev
+            +icon('arrow-left')
+          .swiper-pagination

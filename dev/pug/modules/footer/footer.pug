@@ -1,0 +1,48 @@
+footer.footer.text-white
+  .container
+    .row.footer-body
+      .col-3
+        .footer-menu__title.subtitle.mb-4 Каталог
+        ul.footer-menu__list
+          li
+            a(href="#").link.link-accent Весовое оборудование
+          li
+            a(href="#").link.link-accent Холодильное оборудование 
+          li
+            a(href="#").link.link-accent Торговое оборудование
+          li
+            a(href="#").link.link-accent Технологическое оборудование 
+          li
+            a(href="#").link.link-accent Ремонт
+          li
+            a(href="#").link.link-accent Обслуживанине
+      .col-3
+        .footer-menu__title.subtitle.mb-4 О компании
+        ul.footer-menu__list
+          li
+            a(href="#").link.link-accent Акции и новости
+          li
+            a(href="#").link.link-accent Доставка и оплата
+          li
+            a(href="#").link.link-accent Контакты
+          li
+            a(href="#").link.link-accent Отзывы
+      .col-3
+        ul
+          li.footer-contact-item.pb-2
+            a.link.d-flex.align-items-center(href="tel:+73882261122")
+              +icon('phone-footer', 'footer-icon')
+              span.text-big.font-weight-bold.ml-3 8 388 226-1122
+          li.footer-contact-item.footer-contact-item__mail
+            a.link.d-flex.align-items-center(href="mailto:info@vesta-horeca.ru")
+              +icon('mail-footer', 'footer-icon')
+              span.text-big.font-weight-bold.ml-3 info@vesta-horeca.ru
+      .col-3
+        .footer-social.d-flex.pt-2
+          .footer-social-item.footer-social-item__insta
+            +icon('instagram', 'footer-social')
+          .footer-social-item
+            +icon('vk', 'footer-social')
+    .footer-copyright.d-flex.justify-content-between.py-3
+      .company © Веста, 2019
+      .dev Разработка сайта - E1MEDIA
