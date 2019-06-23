@@ -6,18 +6,33 @@
 html
   height: 100%
   @include fluid-type($min_width, $max_width, $min_font, $max_font)
+body.index-page
+  header
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    z-index: 500
+  .header__body, .header__footer
+    background-color: transparent
+    background-image: none
 body
   height: 100%
   color: $text
+  font-family: rubik
+  font-weight: 300
 h1, h2, h3, h4, h5, h6
+  font-family: 'rubik-medium'
+  font-weight: 500
   margin: 0
 .subtitle
-  font-size: 14px
+  font-family: 'rubik-medium'
+  font-size: 0.875rem
   text-transform: uppercase
   font-weight: 500
 
 .text-big
-  font-size: 25px
+  font-size: 1.5625rem
 
 ul, li
   list-style-type: none
@@ -60,6 +75,10 @@ button
 
 .content
   flex: 1 0 auto
+  overflow-x: hidden
+
+header
+  position: relative
 
 section
   padding: 65px 0
@@ -94,16 +113,29 @@ section
 
 .banner-slider
   position: relative
+  .swiper-pagination-bullet
+    background-color: #fff!important
+  .swiper-pagination
+    position: absolute
+    bottom: 50px
+  .swiper-button-prev
+    top: 100px
+    bottom: 0
+    left: 10%
+    margin: auto
+    background-image: none
+    .icon-arrow-left--main
+      opacity: .5
   .swiper-button-next
     top: 100px
     bottom: 0
     right: 10%
     margin: auto
     background-image: none
-    .icon-arrow-right--main
-      width: 63px
-      height: 63px
-      fill: #fff
+  .icon-arrow-right--main, .icon-arrow-left--main
+    width: 63px
+    height: 63px
+    fill: #fff
 .banner-slide
   &:before
     content: ''
@@ -127,6 +159,12 @@ section
     margin-bottom: 3.4375rem
     
 .catalog-slider
+  .swiper-slide
+    overflow: hidden
+    cursor: pointer
+    &:hover
+      .catalog-slide
+        transform: scale(1.25)
 .catalog-slide
   &:before
     content: ''
@@ -137,13 +175,18 @@ section
     bottom: 0
     right: 0
     left: 0
-  position: relative
-  background-size: cover
+  transition: .5s ease
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-size: 100%
   background-repeat: no-repeat
   background-position: center
-  padding: 30px
   &__title
     z-index: 50
+    padding: 30px
     position: relative
 .catalog-slide__title
   display: flex
@@ -159,6 +202,16 @@ section
 .section-recommended
 .recommended-item
   box-shadow: 0px 0px 14px rgba(36, 40, 58, 0.1)
+  transition: .3s ease
+  cursor: pointer
+  &:hover
+    box-shadow: 0px 2px 18px rgba(36, 40, 58, 0.2)
+    .recommended-item__photo
+      transform: translatey(-10%) scale(0.8)
+      -webkit-backface-visibility: hidden
+      -moz-backface-visibility: hidden
+      -ms-backface-visibility: hidden
+      // transform-origin: top center
 .recommended-item.active
   &:before
     content: 'хит'
@@ -181,6 +234,12 @@ section
   flex-direction: column
   justify-content: space-between
 .recommended-item__photo
+  width: auto!important
+  height: auto!important
+  right: 0
+  bottom: 0
+  margin: 0.9375rem 0.3125rem
+  transition: .6s ease
   background-size: contain
   background-position: center
   background-repeat: no-repeat
@@ -212,6 +271,7 @@ section
   flex-direction: column
   transition: .3s ease
   padding: 1.25rem 0.625rem
+  justify-content: center
   &__icon
     width: 97px
     height: 97px
@@ -220,13 +280,18 @@ section
     display: flex
     justify-content: center
     margin-bottom: 20px
-
-    & > svg
+    transition: .3s ease
+    .svg-sprite-icon  
       width: 50%
+      transition: .3s ease
   &__title
     text-align: center
   &:hover
     border: 2px solid #fff!important
+    .advantage-item__icon
+      background-color: $red
+    .svg-sprite-icon 
+      fill: white
 
 .section-about-us
   padding-top: 6.25rem
@@ -245,6 +310,10 @@ section
 .review-item
   padding: 2.9375rem 1.875rem
   box-shadow: 0px 0px 14px rgba(36, 40, 58, 0.1)
+  cursor: pointer
+  transition: .4s ease
+  &:hover
+    box-shadow: 0px 2px 15px rgba(36, 40, 58, 0.2)
   &__header
     position: relative
     display: flex
@@ -265,6 +334,58 @@ section
     background-position: center
     background-repeat: no-repeat
     background-size: cover
+.swiper-container
+  padding: 0 10px
+  margin: -10px -10px 0
+  padding-top: 10px
+
+
+
+.filtr-text
+  font-weight: 500
+  font-family: rubik-medium
+.filtr-reset
+  font-size: 0.875rem
+  border-bottom: 1px dashed #000
+  line-height: 1
+  cursor: pointer
+.filtr-block
+  margin-top: 3.125rem
+  padding-bottom: 1.875rem
+  border-bottom: 2px solid $text
+  margin-bottom: 1.25rem
+.form-control
+  cursor: pointer
+  border-radius: 0
+  background-color: #ececec
+.form-control:focus
+  border: 1px solid $red
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, .2)
+.input-height
+  height: 42px
+.filtr-item
+  display: flex
+  justify-content: flex-end
+  flex-direction: column
+.icon-sorting
+  width: 18px
+  height: 11px
+  fill: $red
+.link-dashed
+  color: $red
+  border-bottom: 1px dashed $red
+  &:hover
+    color: $red
+    text-decoration: none
+    border-bottom: none
+.sorting-block
+  margin-bottom: 2.0625rem
+.sorting-icon
+  width: 23px
+  height: 23px
+  transition: .3s ease
+  &:hover
+    fill: $red
 
 //Модули
 @import modules/modules

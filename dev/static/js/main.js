@@ -6,6 +6,11 @@ $(document).ready(function () {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
   });    
     var Slider = new Swiper('.main-slider', {
       speed: 400,

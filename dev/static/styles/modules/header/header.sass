@@ -1,9 +1,7 @@
-header
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
-  z-index: 500
+.header__body, .header__footer
+  background-image: url(../images/general/bg-light.png)
+  background-color: $text
+
 .header__top
   background-color: #fff
   background-image: url(../images/general/bg-dark.png)
@@ -13,6 +11,7 @@ header
   max-width: 546px
 .header__phone
   font-weight: 500
+  font-family: 'rubik-medium'
   font-size: 1.25rem
 .callback
   font-size: 14px
@@ -66,6 +65,7 @@ header
   transition: .3s ease
   transform: scaley(0)
   transform-origin: top
+  z-index: 900
 .header-menu__list, .footer-menu__list
   li
     margin-bottom: 0.625rem
@@ -82,7 +82,7 @@ header
 
 .border-animation 
   --border-width: 0.2em
-  --animation-speed: 0.5s
+  --animation-speed: 1s
   --color: #E30D26
   color: var(--color)
   position: relative

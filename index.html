@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Главная страница</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.min.css"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body class="index-page">
+    <div class="wrapper">
+      <header class="header">
+        <nav class="header__top">
+          <div class="container d-flex justify-content-between align-items-center">
+            <ul class="header__nav d-flex align-items-center justify-content-between">
+              <li> <a class="link" href="#">О компании</a></li>
+              <li> <a class="link" href="#">Акции и новости</a></li>
+              <li><a class="link" href="#">Доставка и оплата</a></li>
+              <li> <a class="link" href="#">Контакты</a></li>
+              <li><a class="link" href="#">Отзывы</a></li>
+            </ul>
+            <div class="phone header__phone"><a class="link" href="tel:+73882261122" title="title">8 388-226-11-22</a></div>
+            <div class="btn callback">
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.50099 0C4.25467 0 0.00100708 4.25367 0.00100708 9.5C0.00100708 14.7463 4.25467 19 9.50099 19C14.7473 19 19.0009 14.7462 19.0009 9.5C19.0009 4.25367 14.7473 0 9.50099 0ZM14.5176 13.8616L13.757 14.6224C13.6212 14.758 13.2235 14.8426 13.2107 14.8426C10.8044 14.8636 8.48746 13.9184 6.7851 12.2159C5.07808 10.5079 4.13179 8.18264 4.1572 5.76819C4.1572 5.76709 4.24429 5.38084 4.37997 5.24645L5.14058 4.48572C5.41892 4.20609 5.95358 4.07973 6.32813 4.20504L6.48813 4.25841C6.86158 4.3836 7.25367 4.79652 7.35685 5.17694L7.73946 6.58123C7.84264 6.96275 7.70347 7.50552 7.42522 7.78385L6.91734 8.29181C7.41598 10.1378 8.86439 11.5865 10.7107 12.0864L11.2184 11.5783C11.498 11.2986 12.0406 11.1596 12.4213 11.2626L13.8254 11.6466C14.2059 11.7512 14.6187 12.1408 14.7439 12.5141L14.7972 12.6764C14.9213 13.0499 14.7959 13.5845 14.5176 13.8616Z" fill="white"/>
+              </svg> <span class="callback-text ml-2">Обратный звонок</span>
+            </div>
+          </div>
+        </nav>
+        <div class="header__body text-white pt-4 pb-3">
+          <div class="container">
+            <div class="row">
+              <div class="col-2"><a class="header__logo" href="">
+                  <svg class="svg-sprite-icon icon-logo">
+                    <use xlink:href="static/images/svg/symbol/sprite.svg#logo"></use>
+                  </svg></a></div>
+              <div class="col-10 d-flex justify-content-between">
+                <div class="header__search">
+                  <label class="m-0 border-animation" href="#">
+                    <svg class="svg-sprite-icon icon-loop">
+                      <use xlink:href="static/images/svg/symbol/sprite.svg#loop"></use>
+                    </svg>
+                    <input class="border-animation__inner">
+                  </label>
+                </div>
+                <div class="header__auth subtitle d-flex align-items-center mx-5"><a class="link" href="">
+                    <svg class="mr-3" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26.9621 27H1.03789C1.54851 20.2876 7.15677 15 14 15C20.8432 15 26.4515 20.2876 26.9621 27Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                    <circle cx="14" cy="8" r="7" stroke="white" stroke-width="2"/>
+                    </svg> вход/регистрация</a></div>
+                <div class="header__cart subtitle d-flex align-items-center"><a class="link" href="">
+                    <svg class="mr-3" width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5717 10.2617L8.35971 6.55095H14.1592C14.7754 6.55095 15.2746 6.05128 15.2746 5.43506C15.2746 4.81884 14.7754 4.31917 14.1592 4.31917H7.63086L6.51106 0.89061C6.35841 0.420074 5.9218 0.12088 5.45214 0.12088L1.27256 0.119141C0.65634 0.119141 0.157104 0.618378 0.157104 1.2346C0.157104 1.85081 0.65634 2.35049 1.27256 2.35049H4.64501C6.64326 8.47005 8.64194 14.5901 10.6402 20.7101C9.84741 20.8727 9.139 21.2663 8.58758 21.8177C7.85177 22.5535 7.39646 23.5702 7.39646 24.6926C7.39646 25.8155 7.85177 26.8322 8.58758 27.5676C9.32339 28.3039 10.3401 28.7587 11.4625 28.7587C12.5854 28.7587 13.6017 28.3039 14.3379 27.5676C15.0737 26.8318 15.5286 25.8155 15.5286 24.6926C15.5286 24.0325 15.3712 23.4093 15.092 22.8579H22.8389C22.5584 23.4098 22.4001 24.0329 22.4001 24.6926C22.4001 25.8155 22.8554 26.8318 23.5912 27.5676C24.327 28.3039 25.3437 28.7587 26.4666 28.7587C27.589 28.7587 28.6057 28.3039 29.3415 27.5676C30.0773 26.8318 30.5322 25.8155 30.5322 24.6926C30.5322 23.5733 30.0778 22.5587 29.3424 21.8229C28.5866 21.0662 27.5346 20.6266 26.464 20.6266H12.9563L12.3136 18.6579L26.467 18.6561C26.9362 18.6561 27.3729 18.3569 27.5259 17.8864L31.4563 5.84949C31.5076 5.72164 31.5359 5.58161 31.5359 5.43506C31.5359 4.81884 31.0367 4.31917 30.4205 4.31917H23.085C22.4688 4.31917 21.9695 4.81884 21.9695 5.43506C21.9695 6.05128 22.4688 6.55095 23.085 6.55095H28.8845L27.6725 10.2617H9.5717ZM26.9441 12.4922H10.2997L11.5847 16.4265H25.6595L26.9441 12.4922ZM18.6219 4.31917C18.0057 4.31917 17.5064 4.81884 17.5064 5.43506C17.5064 6.05128 18.0057 6.55051 18.6219 6.55051C19.2381 6.55051 19.7378 6.05128 19.7378 5.43506C19.7378 4.81884 19.2381 4.31917 18.6219 4.31917ZM26.5431 22.8553C27.0193 22.8744 27.4494 23.0758 27.7647 23.3919C28.096 23.7233 28.3013 24.1834 28.3013 24.6926C28.3013 25.1997 28.0956 25.6585 27.7638 25.9903C27.432 26.3221 26.9732 26.5274 26.4666 26.5274C25.9599 26.5274 25.5012 26.3221 25.1693 25.9903C24.8371 25.6581 24.6318 25.1993 24.6318 24.6926C24.6318 24.1834 24.8371 23.7233 25.1685 23.3919C25.4725 23.0875 25.883 22.8892 26.3387 22.8579C26.417 22.8514 26.4631 22.8514 26.5431 22.8553ZM12.7602 23.3954C13.092 23.7272 13.2973 24.186 13.2973 24.6926C13.2973 25.1997 13.092 25.6581 12.7602 25.9903C12.4284 26.3221 11.9696 26.5274 11.463 26.5274C10.9559 26.5274 10.4971 26.3221 10.1657 25.9899C9.8335 25.6581 9.62824 25.1993 9.62824 24.6926C9.62824 24.186 9.8335 23.7272 10.1657 23.3954C10.4971 23.0632 10.9563 22.8579 11.463 22.8579C11.9696 22.8579 12.4284 23.0632 12.7602 23.3954Z" fill="white"/>
+                    </svg> Корзина</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__footer text-white">
+          <div class="container">
+            <div class="row">
+              <div class="col-2 position-static">
+                <label class="menu-btn d-flex m-0">
+                  <input class="menu-toggle" type="checkbox" id="menu-toggle">
+                  <div class="hamburger hamburger--emphatic">
+                    <div class="hamburger-box">
+                      <div class="hamburger-inner"></div>
+                    </div>
+                  </div><span class="subtitle">Каталог</span>
+                  <div class="header-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-3 header-menu__block">
+                          <div class="header-menu__title subtitle mb-4">Весовое оборудование</div>
+                          <ul class="header-menu__list">
+                            <li><a class="link link-accent" href="#">Настольные электронные весы</a></li>
+                            <li><a class="link link-accent" href="#">Крановые весы</a></li>
+                            <li><a class="link link-accent" href="#">Напольные весы</a></li>
+                            <li><a class="link link-accent" href="#">Торговые весы</a></li>
+                            <li><a class="link link-accent" href="#">Счетные весы</a></li>
+                            <li><a class="link link-accent" href="#">Весы с печатью этикеток</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-3 header-menu__block">
+                          <div class="header-menu__title subtitle mb-4">Весовое оборудование</div>
+                          <ul class="header-menu__list">
+                            <li><a class="link link-accent" href="#">Настольные электронные весы</a></li>
+                            <li><a class="link link-accent" href="#">Крановые весы</a></li>
+                            <li><a class="link link-accent" href="#">Напольные весы</a></li>
+                            <li><a class="link link-accent" href="#">Торговые весы</a></li>
+                            <li><a class="link link-accent" href="#">Счетные весы</a></li>
+                            <li><a class="link link-accent" href="#">Весы с печатью этикеток</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-3 header-menu__block">
+                          <div class="header-menu__title subtitle mb-4">Весовое оборудование</div>
+                          <ul class="header-menu__list">
+                            <li><a class="link link-accent" href="#">Настольные электронные весы</a></li>
+                            <li><a class="link link-accent" href="#">Крановые весы</a></li>
+                            <li><a class="link link-accent" href="#">Напольные весы</a></li>
+                            <li><a class="link link-accent" href="#">Торговые весы</a></li>
+                            <li><a class="link link-accent" href="#">Счетные весы</a></li>
+                            <li><a class="link link-accent" href="#">Весы с печатью этикеток</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-3 header-menu__block">
+                          <div class="header-menu__title subtitle mb-4">Весовое оборудование</div>
+                          <ul class="header-menu__list">
+                            <li><a class="link link-accent" href="#">Настольные электронные весы</a></li>
+                            <li><a class="link link-accent" href="#">Крановые весы</a></li>
+                            <li><a class="link link-accent" href="#">Напольные весы</a></li>
+                            <li><a class="link link-accent" href="#">Торговые весы</a></li>
+                            <li><a class="link link-accent" href="#">Счетные весы</a></li>
+                            <li><a class="link link-accent" href="#">Весы с печатью этикеток</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <div class="col-10 d-flex align-items-center">
+                <ul class="catalog-list d-flex justify-content-between subtitle w-100">
+                  <li><a class="link" href="#" title="title">Весовое оборудование</a></li>
+                  <li><a class="link" href="#" title="title">Холодильное оборудование</a></li>
+                  <li><a class="link" href="#" title="title">Торговое оборудование</a></li>
+                  <li><a class="link" href="#" title="title">Мебель</a></li>
+                  <li><a class="link" href="#" title="title">Ремонт</a></li>
+                  <li><a class="link" href="#" title="title">Обслуживание</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <section class="section-banner p-0 text-white">
+          <div class="swiper-container banner-slider">
+            <div class="swiper-wrapper">
+              <div class="embed-responsive embed-responsive-21by9 swiper-slide">
+                <div class="embed-responsive-item banner-slide d-flex align-items-center" style="background-image:url(static/images/content/povar.jpg);">
+                  <div class="banner-slide__content container">
+                    <h1 class="banner-slide__title">Ваш повар будет на высоте!</h1>
+                    <div class="banner-slide__text text-big">Профессиональное кухонное оборудование для ресторанов в наличии в Горно-Алтайске</div>
+                    <div class="btn">Узнать подробности</div>
+                  </div>
+                </div>
+              </div>
+              <div class="embed-responsive embed-responsive-21by9 swiper-slide">
+                <div class="embed-responsive-item banner-slide d-flex align-items-center" style="background-image:url(static/images/content/povar2.jpg);">
+                  <div class="banner-slide__content container">
+                    <h1 class="banner-slide__title">Ваш повар будет на высоте!</h1>
+                    <div class="banner-slide__text text-big">Профессиональное кухонное оборудование для ресторанов в наличии в Горно-Алтайске</div>
+                    <div class="btn">Узнать подробности</div>
+                  </div>
+                </div>
+              </div>
+              <div class="embed-responsive embed-responsive-21by9 swiper-slide">
+                <div class="embed-responsive-item banner-slide d-flex align-items-center" style="background-image:url(static/images/content/povar3.jpg);">
+                  <div class="banner-slide__content container">
+                    <h1 class="banner-slide__title">Ваш повар будет на высоте!</h1>
+                    <div class="banner-slide__text text-big">Профессиональное кухонное оборудование для ресторанов в наличии в Горно-Алтайске</div>
+                    <div class="btn">Узнать подробности</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next">
+              <svg class="svg-sprite-icon icon-arrow-right--main">
+                <use xlink:href="static/images/svg/symbol/sprite.svg#arrow-right--main"></use>
+              </svg>
+            </div>
+          </div>
+        </section>
+        <section class="section-catalog">
+          <div class="container">
+            <div class="section-title">
+              <h1>Популярные категории</h1>
+              <div class="section-title-btn btn">весь каталог</div>
+            </div>
+            <div class="swiper-container main-slider catalog-slider text-center">
+              <div class="swiper-wrapper">
+                <div class="embed-responsive embed-responsive-1by1 swiper-slide">
+                  <div class="embed-responsive-item catalog-slide" style="background-image:url(static/images/content/catalog-item1.jpg);">
+                    <div class="catalog-slide__title">Холодильное оборудование</div>
+                  </div>
+                </div>
+                <div class="embed-responsive embed-responsive-1by1 swiper-slide">
+                  <div class="embed-responsive-item catalog-slide" style="background-image:url(static/images/content/catalog-item2.jpg);">
+                    <div class="catalog-slide__title">Торговое оборудование</div>
+                  </div>
+                </div>
+                <div class="embed-responsive embed-responsive-1by1 swiper-slide">
+                  <div class="embed-responsive-item catalog-slide" style="background-image:url(static/images/content/catalog-item3.jpg);">
+                    <div class="catalog-slide__title">Весовое оборудование</div>
+                  </div>
+                </div>
+                <div class="embed-responsive embed-responsive-1by1 swiper-slide">
+                  <div class="embed-responsive-item catalog-slide" style="background-image:url(static/images/content/catalog-item1.jpg);"></div>
+                </div>
+              </div>
+              <div class="swiper-navigation">
+                <div class="swiper-button-next">
+                  <svg class="svg-sprite-icon icon-arrow-right">
+                    <use xlink:href="static/images/svg/symbol/sprite.svg#arrow-right"></use>
+                  </svg>
+                </div>
+                <div class="swiper-button-prev">
+                  <svg class="svg-sprite-icon icon-arrow-left">
+                    <use xlink:href="static/images/svg/symbol/sprite.svg#arrow-left"></use>
+                  </svg>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-recommended">
+          <div class="container">
+            <div class="section-title">
+              <h1>Рекомендованные товары</h1>
+              <div class="section-title-btn btn">весь каталог</div>
+            </div>
+            <div class="recommended-slider swiper-container text-center">
+              <div class="swiper-wrapper text-left">
+                <div class="swiper-slide embed-responsive embed-responsive-1by1">
+                  <div class="embed-responsive-item recommended-item active">
+                    <div class="recommended-item-wrapper">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <div class="embed-responsive-item recommended-item__photo" style="background-image:url(static/images/content/rec.png);"></div>
+                      </div>
+                      <div class="recommended-item-desc">
+                        <div class="recommended-item-title text-big">Фритюрница ERGO EF-062</div>
+                        <div class="recommended-item-price">6 697 <span class="recommended-item-cur">₽/шт</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide embed-responsive embed-responsive-1by1">
+                  <div class="embed-responsive-item recommended-item">
+                    <div class="recommended-item-wrapper">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <div class="embed-responsive-item recommended-item__photo" style="background-image:url(static/images/content/rec2.png);"></div>
+                      </div>
+                      <div class="recommended-item-desc">
+                        <div class="recommended-item-title text-big">Фритюрница ERGO EF-062</div>
+                        <div class="recommended-item-price">6 697 <span class="recommended-item-cur">₽/шт</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide embed-responsive embed-responsive-1by1">
+                  <div class="embed-responsive-item recommended-item">
+                    <div class="recommended-item-wrapper">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <div class="embed-responsive-item recommended-item__photo" style="background-image:url(static/images/content/rec3.png);"></div>
+                      </div>
+                      <div class="recommended-item-desc">
+                        <div class="recommended-item-title text-big">Фритюрница ERGO EF-062</div>
+                        <div class="recommended-item-price">6 697 <span class="recommended-item-cur">₽/шт</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide embed-responsive embed-responsive-1by1">
+                  <div class="embed-responsive-item recommended-item active">
+                    <div class="recommended-item-wrapper">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <div class="embed-responsive-item recommended-item__photo" style="background-image:url(static/images/content/rec.png);"></div>
+                      </div>
+                      <div class="recommended-item-desc">
+                        <div class="recommended-item-title text-big">Фритюрница ERGO EF-062</div>
+                        <div class="recommended-item-price">6 697 <span class="recommended-item-cur">₽/шт</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide embed-responsive embed-responsive-1by1">
+                  <div class="embed-responsive-item recommended-item">
+                    <div class="recommended-item-wrapper">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <div class="embed-responsive-item recommended-item__photo" style="background-image:url(static/images/content/rec2.png);"></div>
+                      </div>
+                      <div class="recommended-item-desc">
+                        <div class="recommended-item-title text-big">Фритюрница ERGO EF-062</div>
+                        <div class="recommended-item-price">6 697 <span class="recommended-item-cur">₽/шт</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide embed-responsive embed-responsive-1by1">
+                  <div class="embed-responsive-item recommended-item">
+                    <div class="recommended-item-wrapper">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <div class="embed-responsive-item recommended-item__photo" style="background-image:url(static/images/content/rec3.png);"></div>
+                      </div>
+                      <div class="recommended-item-desc">
+                        <div class="recommended-item-title text-big">Фритюрница ERGO EF-062</div>
+                        <div class="recommended-item-price">6 697 <span class="recommended-item-cur">₽/шт</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide embed-responsive embed-responsive-1by1">
+                  <div class="embed-responsive-item recommended-item active">
+                    <div class="recommended-item-wrapper">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <div class="embed-responsive-item recommended-item__photo" style="background-image:url(static/images/content/rec.png);"></div>
+                      </div>
+                      <div class="recommended-item-desc">
+                        <div class="recommended-item-title text-big">Фритюрница ERGO EF-062</div>
+                        <div class="recommended-item-price">6 697 <span class="recommended-item-cur">₽/шт</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide embed-responsive embed-responsive-1by1">
+                  <div class="embed-responsive-item recommended-item">
+                    <div class="recommended-item-wrapper">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <div class="embed-responsive-item recommended-item__photo" style="background-image:url(static/images/content/rec2.png);"></div>
+                      </div>
+                      <div class="recommended-item-desc">
+                        <div class="recommended-item-title text-big">Фритюрница ERGO EF-062</div>
+                        <div class="recommended-item-price">6 697 <span class="recommended-item-cur">₽/шт</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide embed-responsive embed-responsive-1by1">
+                  <div class="embed-responsive-item recommended-item">
+                    <div class="recommended-item-wrapper">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <div class="embed-responsive-item recommended-item__photo" style="background-image:url(static/images/content/rec3.png);"></div>
+                      </div>
+                      <div class="recommended-item-desc">
+                        <div class="recommended-item-title text-big">Фритюрница ERGO EF-062</div>
+                        <div class="recommended-item-price">6 697 <span class="recommended-item-cur">₽/шт</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-navigation">
+                <div class="swiper-button-next">
+                  <svg class="svg-sprite-icon icon-arrow-right">
+                    <use xlink:href="static/images/svg/symbol/sprite.svg#arrow-right"></use>
+                  </svg>
+                </div>
+                <div class="swiper-button-prev">
+                  <svg class="svg-sprite-icon icon-arrow-left">
+                    <use xlink:href="static/images/svg/symbol/sprite.svg#arrow-left"></use>
+                  </svg>
+                </div>
+                <div class="swiper-pagination">       </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-advantages text-white">
+          <div class="container">
+            <div class="section-title section-title--center text-white">
+              <h1>Преимущества</h1>
+            </div>
+            <div class="row no-gutters">
+              <div class="col-3">
+                <div class="embed-responsive embed-responsive-1by1">
+                  <div class="embed-responsive-item advantage-item">
+                    <div class="advantage-item__icon">
+                      <svg class="svg-sprite-icon icon-advantage-price">
+                        <use xlink:href="static/images/svg/symbol/sprite.svg#advantage-price"></use>
+                      </svg>
+                    </div>
+                    <div class="advantage-item__title text-big">Демократические цены</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="embed-responsive embed-responsive-1by1">
+                  <div class="embed-responsive-item advantage-item">
+                    <div class="advantage-item__icon">
+                      <svg class="svg-sprite-icon icon-advantage-present">
+                        <use xlink:href="static/images/svg/symbol/sprite.svg#advantage-present"></use>
+                      </svg>
+                    </div>
+                    <div class="advantage-item__title text-big">Бесплатная доставка</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="embed-responsive embed-responsive-1by1">
+                  <div class="embed-responsive-item advantage-item">
+                    <div class="advantage-item__icon">
+                      <svg class="svg-sprite-icon icon-advantage-time">
+                        <use xlink:href="static/images/svg/symbol/sprite.svg#advantage-time"></use>
+                      </svg>
+                    </div>
+                    <div class="advantage-item__title text-big">Квалифицированные менеджеры</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="embed-responsive embed-responsive-1by1">
+                  <div class="embed-responsive-item advantage-item">
+                    <div class="advantage-item__icon">
+                      <svg class="svg-sprite-icon icon-advantage-catalog">
+                        <use xlink:href="static/images/svg/symbol/sprite.svg#advantage-catalog"></use>
+                      </svg>
+                    </div>
+                    <div class="advantage-item__title text-big">Более 10 000 позиции в каталоге</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-about-us">
+          <div class="container">
+            <div class="row about-us__content no-gutters">
+              <div class="col-6">
+                <div class="embed-responsive embed-responsive-1by1">
+                  <div class="embed-responsive-item about-photo" style="background-image:url(static/images/content/about-image.jpg);"></div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="container">
+                  <div class="about-us__text">
+                    <div class="section-title">
+                      <h1>Наша компания</h1>
+                    </div>
+                    <p>Компания Веста предлагает товары для обустройства ресторана, кафе, столовых и банкетных залов. Вместе с нами вы легко сделаете пространство для ваших гостей. </p>
+                    <p>Наши эксперты позаботились о том, чтобы у вас всегда был доступ к уникальному ассортименту товаров, с которыми жизнь станет значительно удобнее.</p>
+                    <div class="btn mt-4">Написать руководителю</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-reviews">
+          <div class="container">
+            <div class="section-title section-title--center">
+              <h1>Отзывы наших клиентов</h1>
+            </div>
+            <div class="swiper-container main-slider reviews-slider text-center">
+              <div class="swiper-wrapper text-left py-2">
+                <div class="review-item swiper-slide">
+                  <div class="review-item__header">
+                    <div class="review-item__photo mr-4" style="background-image:url(static/images/content/review.jpg);"></div>
+                    <div class="review-item__user">
+                      <div class="review-item__name text-big">Анастасия</div>
+                      <div class="review-item__company">ООО «Филин»</div>
+                    </div>
+                  </div>
+                  <div class="review-item__body">Компания Веста предлагает товары для обустройства ресторана, кафе, столовых и банкетных залов. Вместе с нами вы легко сделаете пространство для ваших гостей. Наши эксперты позаботились о том, чтобы у вас всегда был доступ к уникальному ассортименту товаров, с которыми жизнь станет значительно удобнее.</div>
+                </div>
+                <div class="review-item swiper-slide">
+                  <div class="review-item__header">
+                    <div class="review-item__photo mr-4" style="background-image:url(static/images/content/review.jpg);"></div>
+                    <div class="review-item__user">
+                      <div class="review-item__name text-big">Анастасия</div>
+                      <div class="review-item__company">ООО «Филин»</div>
+                    </div>
+                  </div>
+                  <div class="review-item__body">Компания Веста предлагает товары для обустройства ресторана, кафе, столовых и банкетных залов. Вместе с нами вы легко сделаете пространство для ваших гостей. Наши эксперты позаботились о том, чтобы у вас всегда был доступ к уникальному ассортименту товаров, с которыми жизнь станет значительно удобнее.</div>
+                </div>
+                <div class="review-item swiper-slide">
+                  <div class="review-item__header">
+                    <div class="review-item__photo mr-4" style="background-image:url(static/images/content/review.jpg);"></div>
+                    <div class="review-item__user">
+                      <div class="review-item__name text-big">Анастасия</div>
+                      <div class="review-item__company">ООО «Филин»</div>
+                    </div>
+                  </div>
+                  <div class="review-item__body">Компания Веста предлагает товары для обустройства ресторана, кафе, столовых и банкетных залов. Вместе с нами вы легко сделаете пространство для ваших гостей. Наши эксперты позаботились о том, чтобы у вас всегда был доступ к уникальному ассортименту товаров, с которыми жизнь станет значительно удобнее.</div>
+                </div>
+                <div class="review-item swiper-slide">
+                  <div class="review-item__header">
+                    <div class="review-item__photo mr-4" style="background-image:url(static/images/content/review.jpg);"></div>
+                    <div class="review-item__user">
+                      <div class="review-item__name text-big">Анастасия</div>
+                      <div class="review-item__company">ООО «Филин»</div>
+                    </div>
+                  </div>
+                  <div class="review-item__body">Компания Веста предлагает товары для обустройства ресторана, кафе, столовых и банкетных залов. Вместе с нами вы легко сделаете пространство для ваших гостей. Наши эксперты позаботились о том, чтобы у вас всегда был доступ к уникальному ассортименту товаров, с которыми жизнь станет значительно удобнее.</div>
+                </div>
+                <div class="review-item swiper-slide">
+                  <div class="review-item__header">
+                    <div class="review-item__photo mr-4" style="background-image:url(static/images/content/review.jpg);"></div>
+                    <div class="review-item__user">
+                      <div class="review-item__name text-big">Анастасия</div>
+                      <div class="review-item__company">ООО «Филин»</div>
+                    </div>
+                  </div>
+                  <div class="review-item__body">Компания Веста предлагает товары для обустройства ресторана, кафе, столовых и банкетных залов. Вместе с нами вы легко сделаете пространство для ваших гостей. Наши эксперты позаботились о том, чтобы у вас всегда был доступ к уникальному ассортименту товаров, с которыми жизнь станет значительно удобнее.</div>
+                </div>
+              </div>
+              <div class="swiper-navigation">
+                <div class="swiper-button-next">
+                  <svg class="svg-sprite-icon icon-arrow-right">
+                    <use xlink:href="static/images/svg/symbol/sprite.svg#arrow-right"></use>
+                  </svg>
+                </div>
+                <div class="swiper-button-prev">
+                  <svg class="svg-sprite-icon icon-arrow-left">
+                    <use xlink:href="static/images/svg/symbol/sprite.svg#arrow-left"></use>
+                  </svg>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer text-white">
+        <div class="container">
+          <div class="row footer-body">
+            <div class="col-3">
+              <div class="footer-menu__title subtitle mb-4">Каталог</div>
+              <ul class="footer-menu__list">
+                <li><a class="link link-accent" href="#">Весовое оборудование</a></li>
+                <li><a class="link link-accent" href="#">Холодильное оборудование </a></li>
+                <li><a class="link link-accent" href="#">Торговое оборудование</a></li>
+                <li><a class="link link-accent" href="#">Технологическое оборудование </a></li>
+                <li><a class="link link-accent" href="#">Ремонт</a></li>
+                <li><a class="link link-accent" href="#">Обслуживанине</a></li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <div class="footer-menu__title subtitle mb-4">О компании</div>
+              <ul class="footer-menu__list">
+                <li><a class="link link-accent" href="#">Акции и новости</a></li>
+                <li><a class="link link-accent" href="#">Доставка и оплата</a></li>
+                <li><a class="link link-accent" href="#">Контакты</a></li>
+                <li><a class="link link-accent" href="#">Отзывы</a></li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <ul>
+                <li class="footer-contact-item pb-2"><a class="link d-flex align-items-center" href="tel:+73882261122">
+                    <svg class="svg-sprite-icon icon-phone-footer footer-icon">
+                      <use xlink:href="static/images/svg/symbol/sprite.svg#phone-footer"></use>
+                    </svg><span class="text-big font-weight-bold ml-3">8 388 226-1122</span></a></li>
+                <li class="footer-contact-item footer-contact-item__mail"><a class="link d-flex align-items-center" href="mailto:info@vesta-horeca.ru">
+                    <svg class="svg-sprite-icon icon-mail-footer footer-icon">
+                      <use xlink:href="static/images/svg/symbol/sprite.svg#mail-footer"></use>
+                    </svg><span class="text-big font-weight-bold ml-3">info@vesta-horeca.ru</span></a></li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <div class="footer-social d-flex pt-2">
+                <div class="footer-social-item footer-social-item__insta">
+                  <svg class="svg-sprite-icon icon-instagram footer-social">
+                    <use xlink:href="static/images/svg/symbol/sprite.svg#instagram"></use>
+                  </svg>
+                </div>
+                <div class="footer-social-item">
+                  <svg class="svg-sprite-icon icon-vk footer-social">
+                    <use xlink:href="static/images/svg/symbol/sprite.svg#vk"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright d-flex justify-content-between py-3">
+            <div class="company">© Веста, 2019</div>
+            <div class="dev">Разработка сайта - E1MEDIA</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="static/js/jquery-3.3.1.min.js"></script>
+    <script src="static/js/libs.min.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>
