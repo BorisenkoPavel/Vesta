@@ -1,0 +1,173 @@
+extends template/main
+
+block variables
+  - var title = 'Продукт'
+  - var pageClass = 'card-page'
+block content
+  .container 
+    include modules/crumbs/crumbs
+    h1.mb-5 Фритюрница
+    .row.product-card--container
+      .col-5
+        .card-photo(style={'background-image': 'url(static/images/content/rec.png)'})
+      .col-7
+        .product-body
+          .product-item__desc
+            dl
+              dt.product-item__title.text-big Фритюрница ERGO EF-061
+                dd.product-item__text Производитель: <span class='bold'>Китай</span>
+                dd.product-item__text Мощность: <span class='bold'>2 кВт</span>
+                dd.product-item__text Количество ванн: <span class='bold'>1</span>
+                dd.product-item__text Артикул: <span class='bold'>RF-12-551</span>
+          .product-item__price-block
+            .product-item__price.recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+            .product-item__amount.d-flex.align-items-end
+              input(type='button', value='-', onclick="change('amount',0,10,-1);").amount-change
+              input#amount(type='text', value='1')
+              input(type='button', value='+', onclick="change('amount',0,10, 1);").amount-change
+        .product-footer
+          .product-item__price.recommended-item-price.mb-2.text-red <span class="text-big">Итого</span> 6 697 <span class="recommended-item-cur">₽/шт</span>    
+          .btn.recommended-item__btn
+            +icon('cart', 'mr-2')
+            | В корзину
+
+  section.section-recommended
+    .container
+      .section-title
+        h1 Рекомендованные товары
+        .section-title-btn.btn весь каталог
+      .recommended-slider.swiper-container.text-center
+        .swiper-wrapper.text-left
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item.active
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+                  .recommended-item__btn-container.d-flex.align-items-center
+                    .btn.recommended-item__btn.mr-4
+                      +icon('cart', 'mr-2')
+                      | В корзину
+                    a(href="#").link.recommended-item__btn-text Подробнее
+
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec2.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+                  .recommended-item__btn-container.d-flex
+                    .btn.recommended-item__btn.mr-4
+                      +icon('cart', 'mr-2')
+                      | В корзину
+                    a(href="#").link.recommended-item__btn-text Подробнее
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec3.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+                  .recommended-item__btn-container.d-flex
+                    .btn.recommended-item__btn.mr-4
+                      +icon('cart', 'mr-2')
+                      | В корзину
+                    a(href="#").link.recommended-item__btn-text Подробнее
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item.active
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+                  .recommended-item__btn-container.d-flex
+                    .btn.recommended-item__btn.mr-4
+                      +icon('cart', 'mr-2')
+                      | В корзину
+                    a(href="#").link.recommended-item__btn-text Подробнее
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec2.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big ERGO EF-062
+                  .recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+                  .recommended-item__btn-container.d-flex
+                    .btn.recommended-item__btn.mr-4
+                      +icon('cart', 'mr-2')
+                      | В корзину
+                    a(href="#").link.recommended-item__btn-text Подробнее
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec3.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+                  .recommended-item__btn-container.d-flex
+                    .btn.recommended-item__btn.mr-4
+                      +icon('cart', 'mr-2')
+                      | В корзину
+                    a(href="#").link.recommended-item__btn-text Подробнее
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item.active
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+                  .recommended-item__btn-container.d-flex
+                    .btn.recommended-item__btn.mr-4
+                      +icon('cart', 'mr-2')
+                      | В корзину
+                    a(href="#").link.recommended-item__btn-text Подробнее
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec2.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+                  .recommended-item__btn-container.d-flex
+                    .btn.recommended-item__btn.mr-4
+                      +icon('cart', 'mr-2')
+                      | В корзину
+                    a(href="#").link.recommended-item__btn-text Подробнее
+                //- .btn
+          .swiper-slide.embed-responsive.embed-responsive-1by1
+            .embed-responsive-item.recommended-item
+              .recommended-item-wrapper
+                .embed-responsive.embed-responsive-16by9
+                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec3.png)'})
+                .recommended-item-desc
+                  .recommended-item-title.text-big Фритюрница ERGO EF-062
+                  .recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+                  .recommended-item__btn-container.d-flex
+                    .btn.recommended-item__btn.mr-4
+                      +icon('cart', 'mr-2')
+                      | В корзину
+                    a(href="#").link.recommended-item__btn-text Подробнее
+                //- .btn
+        .swiper-navigation
+          .swiper-button-next
+            +icon('arrow-right')
+          .swiper-button-prev
+            +icon('arrow-left')
+          .swiper-pagination

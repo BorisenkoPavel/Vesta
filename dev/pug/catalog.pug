@@ -10,7 +10,7 @@ block content
     .filtr-block
       .filtr-block-title.d-flex.align-items-center.mb-3
         .filtr-text.pr-3 ФИЛЬТР
-        .filtr-reset Сбросить 
+        a(href="#").link.filtr-reset Сбросить 
       .filtr-list.row
         .filtr-item.col-2
           .filtr-item__title Страна производитель
@@ -54,10 +54,168 @@ block content
         span.link-dashed.ml-2 названию A-Я
       .sorting-title.d-inline-block.ml-5 вид:
         a(href="#").ml-2.link
-          +icon('stroke', 'sorting-icon')
+          +icon('stroke', 'sorting-icon active')
         a(href="#").ml-3.link
           +icon('bar', 'sorting-icon')
     section.section-product-list
-      .row
-        .col-12
-          embed(src="", type="")
+      .row.no-gutters.product-list
+ 
+        .product-item
+          .product-item--container
+            .product-item__photo-wrapper.active
+              .embed-responsive.embed-responsive-1by1
+                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+            .product-item__desc
+              dl
+                dt.product-item__title.text-big Фритюрница ERGO EF-061
+                  dd.product-item__text Производитель: <span class='bold'>Китай</span>
+                  dd.product-item__text Мощность: <span class='bold'>2 кВт</span>
+                  dd.product-item__text Количество ванн: <span class='bold'>1</span>
+            .product-item__price-block
+              .product-item__price.recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+              .product-item__amount.d-flex.align-items-end
+                input(type='button', value='-', onclick="change('amount',0,10,-1);").amount-change
+                input#amount(type='text', value='1')
+                input(type='button', value='+', onclick="change('amount',0,10, 1);").amount-change
+              .recommended-item__btn-container.product-item__btn-container.d-flex
+                .btn.recommended-item__btn
+                  +icon('cart', 'mr-2')
+                  | В корзину
+                a(href="#").link.recommended-item__btn-text Подробнее
+        .product-item
+          .product-item--container
+            .product-item__photo-wrapper
+              .embed-responsive.embed-responsive-1by1
+                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+            .product-item__desc
+              dl
+                dt.product-item__title.text-big Фритюрница ERGO EF-061
+                  dd.product-item__text Производитель: <span class='bold'>Китай</span>
+                  dd.product-item__text Мощность: <span class='bold'>2 кВт</span>
+                  dd.product-item__text Количество ванн: <span class='bold'>1</span>
+            .product-item__price-block
+              .product-item__price.recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+              .product-item__amount.d-flex.align-items-end
+                input(type='button', value='-', onclick="change('amount',0,10,-1);").amount-change
+                input#amount(type='text', value='1')
+                input(type='button', value='+', onclick="change('amount',0,10, 1);").amount-change
+              .recommended-item__btn-container.product-item__btn-container.d-flex
+                .btn.recommended-item__btn
+                  +icon('cart', 'mr-2')
+                  | В корзину
+                a(href="#").link.recommended-item__btn-text Подробнее
+        .product-item
+          .product-item--container
+            .product-item__photo-wrapper
+              .embed-responsive.embed-responsive-1by1
+                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+            .product-item__desc
+              dl
+                dt.product-item__title.text-big Фритюрница ERGO EF-061
+                  dd.product-item__text Производитель: <span class='bold'>Китай</span>
+                  dd.product-item__text Мощность: <span class='bold'>2 кВт</span>
+                  dd.product-item__text Количество ванн: <span class='bold'>1</span>
+            .product-item__price-block
+              .product-item__price.recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+              .product-item__amount.d-flex.align-items-end
+                input(type='button', value='-', onclick="change('amount',0,10,-1);").amount-change
+                input#amount(type='text', value='1')
+                input(type='button', value='+', onclick="change('amount',0,10, 1);").amount-change
+              .recommended-item__btn-container.product-item__btn-container.d-flex
+                .btn.recommended-item__btn
+                  +icon('cart', 'mr-2')
+                  | В корзину
+                a(href="#").link.recommended-item__btn-text Подробнее
+        .promo-banner
+          .promo-banner__content.text-white
+            h2.promo-banner__title Профессиональное оборудование для вашей кухни
+            .promo-banner__text Профессиональное кухонное оборудование для ресторанов в наличии в Горно-Алтайске
+            .btn Узнать подробности
+        .product-item
+          .product-item--container
+            .product-item__photo-wrapper
+              .embed-responsive.embed-responsive-1by1
+                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+            .product-item__desc
+              dl
+                dt.product-item__title.text-big Фритюрница ERGO EF-061
+                  dd.product-item__text Производитель: <span class='bold'>Китай</span>
+                  dd.product-item__text Мощность: <span class='bold'>2 кВт</span>
+                  dd.product-item__text Количество ванн: <span class='bold'>1</span>
+            .product-item__price-block
+              .product-item__price.recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+              .product-item__amount.d-flex.align-items-end
+                input(type='button', value='-', onclick="change('amount',0,10,-1);").amount-change
+                input#amount(type='text', value='1')
+                input(type='button', value='+', onclick="change('amount',0,10, 1);").amount-change
+              .recommended-item__btn-container.product-item__btn-container.d-flex
+                .btn.recommended-item__btn
+                  +icon('cart', 'mr-2')
+                  | В корзину
+                a(href="#").link.recommended-item__btn-text Подробнее
+        .product-item
+          .product-item--container
+            .product-item__photo-wrapper
+              .embed-responsive.embed-responsive-1by1
+                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+            .product-item__desc
+              dl
+                dt.product-item__title.text-big Фритюрница ERGO EF-061
+                  dd.product-item__text Производитель: <span class='bold'>Китай</span>
+                  dd.product-item__text Мощность: <span class='bold'>2 кВт</span>
+                  dd.product-item__text Количество ванн: <span class='bold'>1</span>
+            .product-item__price-block
+              .product-item__price.recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+              .product-item__amount.d-flex.align-items-end
+                input(type='button', value='-', onclick="change('amount',0,10,-1);").amount-change
+                input#amount(type='text', value='1')
+                input(type='button', value='+', onclick="change('amount',0,10, 1);").amount-change
+              .recommended-item__btn-container.product-item__btn-container.d-flex
+                      .btn.recommended-item__btn
+                        +icon('cart', 'mr-2')
+                        | В корзину
+                      a(href="#").link.recommended-item__btn-text Подробнее
+        .product-item
+          .product-item--container
+            .product-item__photo-wrapper
+              .embed-responsive.embed-responsive-1by1
+                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+            .product-item__desc
+              dl
+                dt.product-item__title.text-big Фритюрница ERGO EF-061
+                  dd.product-item__text Производитель: <span class='bold'>Китай</span>
+                  dd.product-item__text Мощность: <span class='bold'>2 кВт</span>
+                  dd.product-item__text Количество ванн: <span class='bold'>1</span>
+            .product-item__price-block
+              .product-item__price.recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+              .product-item__amount.d-flex.align-items-end
+                input(type='button', value='-', onclick="change('amount',0,10,-1);").amount-change
+                input#amount(type='text', value='1')
+                input(type='button', value='+', onclick="change('amount',0,10, 1);").amount-change
+              .recommended-item__btn-container.product-item__btn-container.d-flex
+                      .btn.recommended-item__btn
+                        +icon('cart', 'mr-2')
+                        | В корзину
+                      a(href="#").link.recommended-item__btn-text Подробнее
+        .product-item
+          .product-item--container
+            .product-item__photo-wrapper
+              .embed-responsive.embed-responsive-1by1
+                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+            .product-item__desc
+              dl
+                dt.product-item__title.text-big Фритюрница ERGO EF-061
+                  dd.product-item__text Производитель: <span class='bold'>Китай</span>
+                  dd.product-item__text Мощность: <span class='bold'>2 кВт</span>
+                  dd.product-item__text Количество ванн: <span class='bold'>1</span>
+            .product-item__price-block
+              .product-item__price.recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
+              .product-item__amount.d-flex.align-items-end
+                input(type='button', value='-', onclick="change('amount',0,10,-1);").amount-change
+                input#amount(type='text', value='1')
+                input(type='button', value='+', onclick="change('amount',0,10, 1);").amount-change
+              .recommended-item__btn-container.product-item__btn-container.d-flex
+                      .btn.recommended-item__btn
+                        +icon('cart', 'mr-2')
+                        | В корзину
+                      a(href="#").link.recommended-item__btn-text Подробнее

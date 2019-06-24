@@ -4,7 +4,15 @@ footer
   background-image: url(../images/general/bg-dark.png)
 .footer-body
   padding: 5rem 0
-  border-bottom: 2px solid #fff
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    left: 15px
+    right: 15px
+    height: 2px
+    bottom: 0
+    background-color: #fff
 .footer-icon
   width: 17px
   height: 17px
