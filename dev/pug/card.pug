@@ -32,16 +32,16 @@ block content
             | В корзину
 
   section.section-recommended
-    .container
+    .container.text-center
       .section-title
-        h1 Рекомендованные товары
+        h1.text-left Рекомендованные товары
         .section-title-btn.btn весь каталог
-      .recommended-slider.swiper-container.text-center
+      .recommended-slider--top.swiper-container
         .swiper-wrapper.text-left
-          .swiper-slide.embed-responsive.embed-responsive-1by1
+          .big-slide.swiper-slide.embed-responsive.embed-responsive-1by1
             .embed-responsive-item.recommended-item.active
               .recommended-item-wrapper
-                .embed-responsive.embed-responsive-16by9
+                .embed-responsive.embed-responsive-16by9.position-static
                   .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
                 .recommended-item-desc
                   .recommended-item-title.text-big Фритюрница ERGO EF-062
@@ -53,7 +53,7 @@ block content
                     a(href="#").link.recommended-item__btn-text Подробнее
 
                 //- .btn
-          .swiper-slide.embed-responsive.embed-responsive-1by1
+          .normal-slide.swiper-slide.embed-responsive.embed-responsive-1by1
             .embed-responsive-item.recommended-item
               .recommended-item-wrapper
                 .embed-responsive.embed-responsive-16by9
@@ -67,7 +67,7 @@ block content
                       | В корзину
                     a(href="#").link.recommended-item__btn-text Подробнее
                 //- .btn
-          .swiper-slide.embed-responsive.embed-responsive-1by1
+          .normal-slide.swiper-slide.embed-responsive.embed-responsive-1by1
             .embed-responsive-item.recommended-item
               .recommended-item-wrapper
                 .embed-responsive.embed-responsive-16by9
@@ -81,7 +81,7 @@ block content
                       | В корзину
                     a(href="#").link.recommended-item__btn-text Подробнее
                 //- .btn
-          .swiper-slide.embed-responsive.embed-responsive-1by1
+          .normal-slide.swiper-slide.embed-responsive.embed-responsive-1by1
             .embed-responsive-item.recommended-item.active
               .recommended-item-wrapper
                 .embed-responsive.embed-responsive-16by9
@@ -95,7 +95,14 @@ block content
                       | В корзину
                     a(href="#").link.recommended-item__btn-text Подробнее
                 //- .btn
-          .swiper-slide.embed-responsive.embed-responsive-1by1
+      .promo-banner
+        .promo-banner__content.text-white
+          h2.promo-banner__title Профессиональное оборудование для вашей кухни
+          .promo-banner__text Профессиональное кухонное оборудование для ресторанов в наличии в Горно-Алтайске
+          .btn Узнать подробности
+      .recommended-slider--bottom.swiper-container.text-center
+        .swiper-wrapper.text-left
+          .normal-slide.swiper-slide.embed-responsive.embed-responsive-1by1
             .embed-responsive-item.recommended-item
               .recommended-item-wrapper
                 .embed-responsive.embed-responsive-16by9
@@ -109,7 +116,7 @@ block content
                       | В корзину
                     a(href="#").link.recommended-item__btn-text Подробнее
                 //- .btn
-          .swiper-slide.embed-responsive.embed-responsive-1by1
+          .normal-slide.swiper-slide.embed-responsive.embed-responsive-1by1
             .embed-responsive-item.recommended-item
               .recommended-item-wrapper
                 .embed-responsive.embed-responsive-16by9
@@ -123,7 +130,7 @@ block content
                       | В корзину
                     a(href="#").link.recommended-item__btn-text Подробнее
                 //- .btn
-          .swiper-slide.embed-responsive.embed-responsive-1by1
+          .normal-slide.swiper-slide.embed-responsive.embed-responsive-1by1
             .embed-responsive-item.recommended-item.active
               .recommended-item-wrapper
                 .embed-responsive.embed-responsive-16by9
@@ -137,7 +144,7 @@ block content
                       | В корзину
                     a(href="#").link.recommended-item__btn-text Подробнее
                 //- .btn
-          .swiper-slide.embed-responsive.embed-responsive-1by1
+          .normal-slide.swiper-slide.embed-responsive.embed-responsive-1by1
             .embed-responsive-item.recommended-item
               .recommended-item-wrapper
                 .embed-responsive.embed-responsive-16by9
@@ -151,23 +158,10 @@ block content
                       | В корзину
                     a(href="#").link.recommended-item__btn-text Подробнее
                 //- .btn
-          .swiper-slide.embed-responsive.embed-responsive-1by1
-            .embed-responsive-item.recommended-item
-              .recommended-item-wrapper
-                .embed-responsive.embed-responsive-16by9
-                  .embed-responsive-item.recommended-item__photo(style={'background-image': 'url(static/images/content/rec3.png)'})
-                .recommended-item-desc
-                  .recommended-item-title.text-big Фритюрница ERGO EF-062
-                  .recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
-                  .recommended-item__btn-container.d-flex
-                    .btn.recommended-item__btn.mr-4
-                      +icon('cart', 'mr-2')
-                      | В корзину
-                    a(href="#").link.recommended-item__btn-text Подробнее
-                //- .btn
+                
         .swiper-navigation
-          .swiper-button-next
+          .swiper-button-next.rec-button-next
             +icon('arrow-right')
-          .swiper-button-prev
+          .swiper-button-prev.rec-button-prev
             +icon('arrow-left')
-          .swiper-pagination
+          .swiper-pagination.rec-pagination

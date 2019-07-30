@@ -38,10 +38,7 @@ block content
             option Фритюрницы
         .filtr-item.col-2
           .filtr-item__title Цена, ₽
-          select.form-control.form-control-sm.input-height
-            option 
-            option Фритюрницы
-            option Фритюрницы
+            input(type="text" class="js-range-slider" name="my_range" value="" data-type="double" data-min="0" data-max="1000" data-from="200" data-to="500" )
         .filtr-item.col-2.d-flex.align-items-end
          .btn.input-height Применить
     .sorting-block
@@ -74,9 +71,9 @@ block content
             .product-item__price-block
               .product-item__price.recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
               .product-item__amount.d-flex.align-items-end
-                input(type='button', value='-', onclick="change('amount',0,10,-1);").amount-change
+                span.minus -
                 input#amount(type='text', value='1')
-                input(type='button', value='+', onclick="change('amount',0,10, 1);").amount-change
+                span.plus +
               .recommended-item__btn-container.product-item__btn-container.d-flex
                 .btn.recommended-item__btn
                   +icon('cart', 'mr-2')
@@ -96,9 +93,9 @@ block content
             .product-item__price-block
               .product-item__price.recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
               .product-item__amount.d-flex.align-items-end
-                input(type='button', value='-', onclick="change('amount',0,10,-1);").amount-change
+                span.minus -
                 input#amount(type='text', value='1')
-                input(type='button', value='+', onclick="change('amount',0,10, 1);").amount-change
+                span.plus +
               .recommended-item__btn-container.product-item__btn-container.d-flex
                 .btn.recommended-item__btn
                   +icon('cart', 'mr-2')
@@ -118,9 +115,9 @@ block content
             .product-item__price-block
               .product-item__price.recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
               .product-item__amount.d-flex.align-items-end
-                input(type='button', value='-', onclick="change('amount',0,10,-1);").amount-change
+                span.minus -
                 input#amount(type='text', value='1')
-                input(type='button', value='+', onclick="change('amount',0,10, 1);").amount-change
+                span.plus +
               .recommended-item__btn-container.product-item__btn-container.d-flex
                 .btn.recommended-item__btn
                   +icon('cart', 'mr-2')
@@ -145,9 +142,9 @@ block content
             .product-item__price-block
               .product-item__price.recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
               .product-item__amount.d-flex.align-items-end
-                input(type='button', value='-', onclick="change('amount',0,10,-1);").amount-change
+                span.minus -
                 input#amount(type='text', value='1')
-                input(type='button', value='+', onclick="change('amount',0,10, 1);").amount-change
+                span.plus +
               .recommended-item__btn-container.product-item__btn-container.d-flex
                 .btn.recommended-item__btn
                   +icon('cart', 'mr-2')
@@ -167,9 +164,9 @@ block content
             .product-item__price-block
               .product-item__price.recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
               .product-item__amount.d-flex.align-items-end
-                input(type='button', value='-', onclick="change('amount',0,10,-1);").amount-change
+                span.minus -
                 input#amount(type='text', value='1')
-                input(type='button', value='+', onclick="change('amount',0,10, 1);").amount-change
+                span.plus +
               .recommended-item__btn-container.product-item__btn-container.d-flex
                       .btn.recommended-item__btn
                         +icon('cart', 'mr-2')
@@ -189,9 +186,9 @@ block content
             .product-item__price-block
               .product-item__price.recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
               .product-item__amount.d-flex.align-items-end
-                input(type='button', value='-', onclick="change('amount',0,10,-1);").amount-change
+                span.minus -
                 input#amount(type='text', value='1')
-                input(type='button', value='+', onclick="change('amount',0,10, 1);").amount-change
+                span.plus +
               .recommended-item__btn-container.product-item__btn-container.d-flex
                       .btn.recommended-item__btn
                         +icon('cart', 'mr-2')
@@ -211,9 +208,9 @@ block content
             .product-item__price-block
               .product-item__price.recommended-item-price.mb-2 6 697 <span class="recommended-item-cur">₽/шт</span>
               .product-item__amount.d-flex.align-items-end
-                input(type='button', value='-', onclick="change('amount',0,10,-1);").amount-change
+                span.minus -
                 input#amount(type='text', value='1')
-                input(type='button', value='+', onclick="change('amount',0,10, 1);").amount-change
+                span.plus +
               .recommended-item__btn-container.product-item__btn-container.d-flex
                       .btn.recommended-item__btn
                         +icon('cart', 'mr-2')

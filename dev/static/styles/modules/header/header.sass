@@ -1,11 +1,30 @@
-.header__body, .header__footer
-  background-image: url(../images/general/bg-light.png)
+.header, .header-fixed
   background-color: $text
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    opacity: 0.3
+    background-image: url(../images/general/bg-dark.png)
+    pointer-events: none
 
 .header__top
   background-color: #fff
-  background-image: url(../images/general/bg-dark.png)
   justify-content: space-between
+  position: relative
+  &:before
+    pointer-events: none
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    opacity: 0.3
+    background-image: url(../images/general/bg-light.png)
 .header__nav
   width: 100%
   max-width: 546px
@@ -47,12 +66,17 @@
 .menu-toggle
   position: absolute
   visibility: hidden
+.menu-btn.active
+  background-color: $text
 .menu-btn
+  max-width: 10.75rem
   display: flex
   align-items: center
   background: $red
   cursor: pointer
   transition: .3s ease
+  svg
+    transition: .3s ease
 .hamburger
   padding-bottom: 8px
 .header-menu
@@ -60,7 +84,7 @@
   left: 0
   right: 0
   background-color: $text
-  top: 100%
+  top: calc(100% - 141.38px)
   padding: 90px 0
   transition: .3s ease
   transform: scaley(0)
@@ -79,7 +103,8 @@
   .header-menu__block
     opacity: 1
     transform: translate(0)
-
+[id='menu-toggle']:checked ~ svg
+  transform: rotate(180deg)
 .border-animation 
   --border-width: 0.2em
   --animation-speed: 1s
@@ -125,7 +150,7 @@
     outline: none
 
     .border-animation__inner 
-      animation: background calc(var(--animation-speed) / 5 * 3) forwards ease-in-out
+      // animation: background calc(var(--animation-speed) / 5 * 3) forwards ease-in-out
       animation-delay: calc(var(--animation-speed) / 5 * 2)
 
 @keyframes beforeBorders 
@@ -233,3 +258,24 @@
   body 
     justify-content: center
 
+.header-fixed
+  position: absolute
+  top: -200%
+  transition: 1s ease
+  right: 0
+  left: 0
+  margin: auto
+  .header-menu
+    top: 100%
+  .header__search
+    input
+      background-color: #282C37
+      color: #fff
+    .icon-loop
+      fill: transparent
+      stroke: white
+  .header__body
+    .container
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+  .menu-btn
+    background-color: transparent

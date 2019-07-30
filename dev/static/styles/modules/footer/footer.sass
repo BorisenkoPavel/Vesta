@@ -1,7 +1,17 @@
 footer 
   flex: 0 0 auto
   background-color: $text
-  background-image: url(../images/general/bg-dark.png)
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    opacity: 0.3
+    background-image: url(../images/general/bg-dark.png)
+    background-color: $text
 .footer-body
   padding: 5rem 0
   position: relative
@@ -28,3 +38,7 @@ footer
   cursor: pointer
   &:hover
     fill: $red
+.link-mail
+  text-decoration: underline
+  &:hover
+    text-decoration: none

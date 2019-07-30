@@ -27,10 +27,10 @@ block content
               h1.banner-slide__title Ваш повар будет на высоте!
               .banner-slide__text.text-big Профессиональное кухонное оборудование для ресторанов в наличии в Горно-Алтайске
               .btn Узнать подробности
-      .swiper-pagination
-      .swiper-button-next
+      .swiper-pagination.banner-pagination
+      .swiper-button-next.banner-button-next
         +icon('arrow-right--main')
-      .swiper-button-prev
+      .swiper-button-prev.banner-button-prev
         +icon('arrow-left--main')
 
   section.section-catalog
@@ -56,11 +56,11 @@ block content
             .embed-responsive-item
               .catalog-slide(style={'background-image': 'url(static/images/content/catalog-item1.jpg)'})
         .swiper-navigation
-          .swiper-button-next
+          .swiper-button-next.main-button-next
             +icon('arrow-right')
-          .swiper-button-prev
+          .swiper-button-prev.main-button-next
             +icon('arrow-left')
-          .swiper-pagination
+          .swiper-pagination.main-pagination
 
   section.section-recommended
     .container.text-center
@@ -186,12 +186,12 @@ block content
                     a(href="#").link.recommended-item__btn-text Подробнее
                 //- .btn
                 
-      .swiper-navigation
-        .swiper-button-next
-          +icon('arrow-right')
-        .swiper-button-prev
-          +icon('arrow-left')
-        .swiper-pagination
+        .swiper-navigation
+          .swiper-button-next.rec-button-next
+            +icon('arrow-right')
+          .swiper-button-prev.rec-button-prev
+            +icon('arrow-left')
+          .swiper-pagination.rec-pagination
  
   section.section-advantages.text-white
     .container
@@ -258,14 +258,14 @@ block content
               .review-item__user
                 .review-item__name.text-big Анастасия
                 .review-item__company ООО «Филин»
-            .review-item__body Компания Веста предлагает товары для обустройства ресторана, кафе, столовых и банкетных залов. Вместе с нами вы легко сделаете пространство для ваших гостей. Наши эксперты позаботились о том, чтобы у вас всегда был доступ к уникальному ассортименту товаров, с которыми жизнь станет значительно удобнее.
+            .review-item__body Заказываем товары для ресторана в данной компании не в первый раз. Хочется отметить профессионализм и компетентность менеджеров компании Веста. Все кто хочет без особых заморочек и в срок получить необходимый товар — обращайтесь в данную компанию!
           .review-item.swiper-slide
             .review-item__header
               .review-item__photo.mr-4(style={'background-image': 'url(static/images/content/review.jpg)'})
               .review-item__user
                 .review-item__name.text-big Анастасия
                 .review-item__company ООО «Филин»
-            .review-item__body Компания Веста предлагает товары для обустройства ресторана, кафе, столовых и банкетных залов. Вместе с нами вы легко сделаете пространство для ваших гостей. Наши эксперты позаботились о том, чтобы у вас всегда был доступ к уникальному ассортименту товаров, с которыми жизнь станет значительно удобнее.
+            .review-item__body У нас с мужем семейное кафе в Белокурихе, каждый год перед сезоном мы преобретаем новые товары, чтобы радовать наших посетителей. В этом году заказали новые стулья и столовые принадлежность, доставили за неделю. Спасибо!
           .review-item.swiper-slide
             .review-item__header
               .review-item__photo.mr-4(style={'background-image': 'url(static/images/content/review.jpg)'})
@@ -281,8 +281,8 @@ block content
                 .review-item__company ООО «Филин»
             .review-item__body Компания Веста предлагает товары для обустройства ресторана, кафе, столовых и банкетных залов. Вместе с нами вы легко сделаете пространство для ваших гостей. Наши эксперты позаботились о том, чтобы у вас всегда был доступ к уникальному ассортименту товаров, с которыми жизнь станет значительно удобнее.
         .swiper-navigation
-          .swiper-button-next
+          .swiper-button-next.main-button-next
             +icon('arrow-right')
-          .swiper-button-prev
+          .swiper-button-prev.main-button-next
             +icon('arrow-left')
-          .swiper-pagination
+          .swiper-pagination.main-pagination

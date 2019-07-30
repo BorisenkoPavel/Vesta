@@ -13,9 +13,9 @@ body.index-page
     left: 0
     right: 0
     z-index: 500
-  .header__body, .header__footer
     background-color: transparent
-    background-image: none
+    &:before
+      display: none
 body
   height: 100%
   color: $text
@@ -205,7 +205,7 @@ section
   background-position: center
   &__title
     z-index: 50
-    padding: 30px
+    padding: 40px 30px
     position: relative
 .catalog-slide__title
   display: flex
@@ -334,8 +334,17 @@ section
   font-family: 'rubik-medium'
 .section-advantages
   background-color: $text
-  background-image: url(../images/general/bg-dark.png)
-
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    opacity: 0.3
+    background-image: url(../images/general/bg-dark.png)
+    background-color: $text
 .section-advantages
   padding: 9.375rem 0 11.25rem
   .section-title
@@ -411,6 +420,9 @@ section
     background-position: center
     background-repeat: no-repeat
     background-size: cover
+  &__body
+    height: 12.5rem 
+    overflow: hidden
 .swiper-container
   padding: 0 10px
   margin: -10px -10px 0
@@ -443,6 +455,37 @@ section
   box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, .2)
 .input-height
   height: 42px
+.irs--flat .irs-handle
+  left: 14.6758%
+  background-color: transparent
+  cursor: pointer
+  padding: 10px
+  top: 11px
+.irs--flat .irs-handle > i:first-child
+  background: $red
+  width: 8px
+  height: 8px
+  border-radius: 50%
+  cursor: pointer
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  margin: auto
+.irs--flat .irs-bar, .irs--flat .irs-line 
+  top: 20px
+  cursor: pointer
+  height: 2px
+.irs--flat .irs-min, .irs--flat .irs-max
+  display: none
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single
+  cursor: pointer
+  color: $text
+  top: 28px
+  background-color: transparent
+  &:before
+    display: none
+
 .filtr-item
   display: flex
   justify-content: flex-end
@@ -522,14 +565,18 @@ section
   width: auto!important
   height: auto!important
 .product-item__amount
-  input
+  input, .minus, .plus
     width: 2.625rem
     height: 2.625rem
     border: none
     font-weight: bold
     font-family: 'rubik-medium'
     transition: .4s ease
-  .amount-change
+  .minus, .plus
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
     color: #fff
     background-color: $text
     &:hover
@@ -639,5 +686,7 @@ section
   justify-content: space-between
 .product-footer
   padding-top: 25px
+
+
 //Модули
 @import modules/modules

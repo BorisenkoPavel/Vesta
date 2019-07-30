@@ -9,7 +9,9 @@ module.exports = function () {
     $.gulp.task('libsJS:dev', () => {
         return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js', 
         'node_modules/swiper/dist/js/swiper.min.js', 
-        'node_modules/ion.rangeSlider/js/ion.rangeSlider.min.js'])
+        'node_modules/ion.rangeSlider/js/ion.rangeSlider.min.js',
+        'node_modules/sticky/sticky.js'
+      ])
             .pipe(concat('libs.min.js'))
             .pipe($.gulp.dest(scriptsPATH.ouput));
     });
@@ -17,7 +19,9 @@ module.exports = function () {
     $.gulp.task('libsJS:build', () => {
         return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js', 
         'node_modules/swiper/dist/js/swiper.min.js',
-        'node_modules/ion.rangeSlider/js/ion.rangeSlider.min.js'])
+        'node_modules/ion.rangeSlider/js/ion.rangeSlider.min.js',
+        'node_modules/sticky/sticky.js'
+      ])
             .pipe(concat('libs.min.js'))
             .pipe(uglify())
             .pipe($.gulp.dest(scriptsPATH.ouput));
