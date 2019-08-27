@@ -1,0 +1,5 @@
+@import "../mixins/_mixins";
+
+@include font-face("rubik", "../../fonts/Rubik/Rubik");
+@include font-face("rubik", "../../fonts/Rubik/Rubikmedium", 500);
+@include font-face("rubik", "../../fonts/Rubik/Rubiklight", light);

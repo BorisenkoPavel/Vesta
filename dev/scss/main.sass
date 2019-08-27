@@ -1,0 +1,713 @@
+@import vars
+@import utils/libs
+@import mixins/_mixins
+@import utils/fonts
+// @import modules/modules
+
+
+html
+  @include fluid-type($min_width, $max_width, $min_font, $max_font)
+  height: 100%
+
+body
+  height: 100%
+  font-family: 'rubik'
+  font-weight: 300
+  min-width: 320px
+body.index-page
+  header
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    z-index: 500
+    background-color: transparent
+    &:before
+      display: none
+h1, h2, h3, h4, h5, h6
+  font-family: 'rubik'
+  font-weight: 500
+  margin: 0
+
+h1
+  font-size: 3.125rem
+h2
+  font-size: 2.625rem
+h3
+  font-size: 2.25rem
+h4
+  font-size: 1.875rem
+h5
+  font-size: 1.5rem
+
+.subtitle
+  font-family: 'rubik'
+  font-size: 0.875rem
+  text-transform: uppercase
+  font-weight: 500
+
+.text-big
+  font-size: 1.5625rem
+
+ul, li
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+dt
+  font-weight: 300
+  margin-bottom: 0.875rem
+
+a
+  text-decoration: none
+
+p
+  margin-bottom: 1.875rem
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+textarea
+  vertical-align: middle
+
+textarea
+  resize: none
+
+section
+  position: relative
+
+input,
+select,
+button
+  outline: none
+
+.text-red
+  color: $red
+
+.bold
+  font-weight: 500
+  font-family: 'rubik'
+
+.wrapper
+  display: flex
+  flex-direction: column
+  height: 100%
+
+.content
+  flex: 1 0 auto
+  overflow-x: hidden
+
+header
+  position: relative
+
+section
+  padding: 4.0625rem 0
+
+.section-title.text-white
+  &:before
+    background-color: #fff
+.section-title.section-title--center
+  justify-content: center
+  &:before
+    left: 0
+    right: 0
+    margin: auto
+.section-title
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  margin-bottom: 4.375rem
+  &:before
+    content: ''
+    position: absolute
+    bottom: -20px
+    width: 12.875rem
+    height: 2px
+    left: 0
+    background-color: $text
+
+.svg-sprite-icon
+  height: 100%
+  width: 100%
+
+.banner-slider
+  position: relative
+  .swiper-pagination-bullet
+    background-color: #fff!important
+  .swiper-pagination
+    position: absolute
+    bottom: 50px
+  .swiper-button-prev
+    top: 100px
+    bottom: 0
+    left: 10%
+    margin: auto
+    background-image: none
+    .icon-arrow-left--main
+      opacity: .5
+  .swiper-button-next
+    top: 100px
+    bottom: 0
+    right: 10%
+    margin: auto
+    background-image: none
+  .icon-arrow-right--main, .icon-arrow-left--main
+    width: 63px
+    height: 63px
+    fill: #fff
+.banner-slide
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 100
+    background: linear-gradient(180deg, #1A2040 0%, rgba(0, 0, 0, 0) 30.81%), linear-gradient(90deg, #15162D 0%, rgba(0, 0, 0, 0) 43.41%)
+    mix-blend-mode: multiply
+  background-size: cover
+  position: relative
+.banner-slide__content
+  padding-top: 8.75rem
+  z-index: 300
+.banner-slide__title
+  margin-bottom: 23px
+.banner-slide__text
+    max-width: 33.3125rem
+    margin-bottom: 3.4375rem
+    
+.catalog-slider
+  .swiper-slide
+    overflow: hidden
+    cursor: pointer
+    &:hover
+      .catalog-slide
+        transform: scale(1.2)
+        -webkit-backface-visibility: hidden
+        -moz-backface-visibility: hidden
+        -ms-backface-visibility: hidden
+.catalog-slide
+  &:before
+    content: ''
+    position: absolute
+    background: linear-gradient(0deg, rgba(12, 13, 41, 0.79) 0.02%, rgba(12, 13, 41, 0) 93.06%)
+    z-index: 50
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+  transition: .5s ease
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-size: 100%
+  background-repeat: no-repeat
+  background-position: center
+  &__title
+    z-index: 50
+    padding: 40px 30px
+    position: relative
+.catalog-slide__title
+  display: flex
+  align-items: flex-end
+  height: 100%
+  font-weight: 300
+  font-size: 1.875rem
+  text-align: left
+  width: 50%
+  line-height: 2.25rem
+  color: #fff
+
+.section-recommended
+  .recommended-slider--top, .recommended-slider--bottom
+    padding: 0
+    margin: 0 -15px
+    .big-slide
+      max-width: 66.66667%
+      width: 100%!important
+      height: 100%
+      position: relative
+      top: 0
+      bottom: 0
+      &:before
+        padding: 0
+      .recommended-item-wrapper
+        flex-direction: row-reverse
+        align-items: flex-start
+      .recommended-item-desc
+        align-self: flex-end
+      .recommended-item__photo
+        left: 40%
+.recommended-item
+  box-shadow: 0px 0px 14px rgba(36, 40, 58, 0.1)
+  top: 15px!important
+  bottom: 15px!important
+  left: 15px!important
+  right: 15px!important
+  width: auto!important
+  height: auto!important
+  transition: .3s ease
+  cursor: pointer
+  overflow: hidden
+  &:hover
+    box-shadow: 0px 2px 18px rgba(36, 40, 58, 0.2)
+    .recommended-item__photo
+      transform: translatey(-10%) scale(0.8)
+      -webkit-backface-visibility: hidden
+      -moz-backface-visibility: hidden
+      -ms-backface-visibility: hidden
+    .recommended-item-desc
+      transform: translatey(-20%)
+    .recommended-item__btn-container
+      align-items: center
+      font-size: 0.875rem
+      transform: translate(0)
+.recommended-item.active
+  &:before
+    content: 'хит'
+    position: absolute
+    width: 3.75rem
+    height: 3.75rem
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $yellow
+    top: 0.625rem
+    left: 0.625rem
+    z-index: 50
+    font-weight: 500
+    font-family: 'rubik'
+    text-transform: uppercase
+.recommended-item-wrapper
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  & > .embed-responsive.embed-responsive-16by9
+    flex: 0 0 auto
+.big-slide .recommended-item-wrapper
+  & > .embed-responsive.embed-responsive-16by9
+    flex: 1 1 auto
+.recommended-item__photo
+  width: auto!important
+  height: auto!important
+  right: 0
+  bottom: 0
+  margin: 0.9375rem 0.3125rem
+  transition: .4s ease
+  background-size: contain
+  background-position: center
+  background-repeat: no-repeat
+.recommended-item-desc
+  padding: 0.625rem 1.5rem
+  flex: 1 1 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  transition: .4s ease
+.icon-cart
+  width: 1.375rem
+  height: 1.1875rem
+  vertical-align: bottom
+  fill: white
+.recommended-item__btn-container
+  font-size: 0.875rem
+  transform: translatey(500px)
+  transition: .4s ease
+  font-weight: 500
+  font-family: rubik
+.recommended-item__btn-text
+  position: relative
+  white-space: nowrap
+  &:hover
+    &:before
+      background-color: $red
+  &:before
+    content: ''
+    position: absolute
+    bottom: 4px
+    left: 0
+    right: 0
+    height: 1px
+    background-color: $text
+    transition: .3s ease
+  &:after
+    content: ' >'
+    vertical-align: middle
+.recommended-item__btn
+  line-height: 1.2
+.recommended-item-price
+  font-size: 2.5rem
+  font-weight: 500
+  font-family: 'rubik'
+.recommended-item-cur
+  font-size: 1.125rem
+  font-weight: 500
+  font-family: 'rubik'
+.section-advantages
+  background-color: $text
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    opacity: 0.3
+    background-image: url(../img/general/bg-dark.png)
+    background-color: $text
+.section-advantages
+  padding: 9.375rem 0 11.25rem
+  .section-title
+    margin-bottom: 9.375rem
+.advantage-item
+  cursor: pointer
+  display: flex
+  align-items: center
+  border: 2px solid transparent!important
+  flex-direction: column
+  transition: .3s ease
+  padding: 1.25rem 0.625rem
+  justify-content: center
+  &__icon
+    width: 97px
+    height: 97px
+    border-radius: 50%
+    background-color: #fff
+    display: flex
+    justify-content: center
+    margin-bottom: 20px
+    transition: .3s ease
+    .svg-sprite-icon  
+      width: 50%
+      transition: .3s ease
+  &__title
+    text-align: center
+  &:hover
+    border: 2px solid #fff!important
+    .advantage-item__icon
+      background-color: $red
+    .svg-sprite-icon 
+      fill: white
+
+.section-about-us
+  padding-top: 6.25rem
+  padding-bottom: 1.875rem
+.about-us__content
+  box-shadow: 0px 0px 14px rgba(36, 40, 58, 0.1)
+.about-us__text
+  padding: 2rem
+.about-photo
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+
+.section-reviews
+  padding-bottom: 8.125rem
+.review-item
+  padding: 2.9375rem 1.875rem
+  box-shadow: 0px 0px 14px rgba(36, 40, 58, 0.1)
+  cursor: pointer
+  transition: .4s ease
+  &:hover
+    box-shadow: 0px 2px 15px rgba(36, 40, 58, 0.2)
+  &__header
+    position: relative
+    display: flex
+    align-items: center
+    margin-bottom: 70px
+    &:before
+      content: ''
+      position: absolute
+      width: 116px
+      left: 0
+      background-color: $red
+      bottom: -35px
+      height: 2px
+  &__photo
+    width: 116px
+    height: 116px
+    border-radius: 50%
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+  &__body
+    height: 12.5rem 
+    overflow: hidden
+.swiper-container
+  padding: 0 10px
+  margin: -10px -10px 0
+  padding-top: 10px
+
+
+
+.filtr-text
+  font-weight: 500
+  font-family: rubik
+.filtr-reset
+  font-size: 0.875rem
+  border-bottom: 1px dashed $text
+  line-height: 1
+  cursor: pointer
+  transition: .3s ease
+  &:hover
+    border-bottom: 1px dashed $red
+.filtr-block
+  margin-top: 3.125rem
+  padding-bottom: 1.875rem
+  border-bottom: 2px solid $text
+  margin-bottom: 1.25rem
+.form-control
+  cursor: pointer
+  border-radius: 0
+  background-color: #ececec
+.form-control:focus
+  border: 1px solid $red
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, .2)
+.input-height
+  height: 42px
+.irs--flat .irs-handle
+  left: 14.6758%
+  background-color: transparent
+  cursor: pointer
+  padding: 10px
+  top: 11px
+.irs--flat .irs-handle > i:first-child
+  background: $red
+  width: 8px
+  height: 8px
+  border-radius: 50%
+  cursor: pointer
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  margin: auto
+.irs--flat .irs-bar, .irs--flat .irs-line 
+  top: 20px
+  cursor: pointer
+  height: 2px
+.irs--flat .irs-min, .irs--flat .irs-max
+  display: none
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single
+  cursor: pointer
+  color: $text
+  top: 28px
+  background-color: transparent
+  &:before
+    display: none
+
+.filtr-item
+  display: flex
+  justify-content: flex-end
+  flex-direction: column
+.icon-sorting
+  width: 18px
+  height: 11px
+  fill: $red
+.link-dashed
+  color: $red
+  border-bottom: 1px dashed $red
+  &:hover
+    color: $red
+    text-decoration: none
+    border-bottom: none
+.sorting-block
+  margin-bottom: 2.0625rem
+.sorting-icon.active
+  fill: $red
+.sorting-icon
+  width: 23px
+  height: 23px
+  transition: .3s ease
+  &:hover
+    fill: $red
+
+.section-product-list
+  padding-top: 0
+  padding-bottom: 15rem
+.product-item--container
+  border-bottom: 1px solid #EAEAEA
+  padding: 1rem 0
+  width: 100%
+  display: flex
+  align-items: center
+  dl
+    margin: 0
+.product-item 
+  width: 100%
+.product-item__photo-wrapper.active
+  &:before
+    content: 'хит'
+    position: absolute
+    width: 3.75rem
+    height: 3.75rem
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $yellow
+    top: -10%
+    right: -10%
+    z-index: 50
+    font-weight: 500
+    font-family: 'rubik'
+    text-transform: uppercase
+.product-item__photo-wrapper
+  max-width: 8.75rem
+  width: 100%
+  border: 1px solid #EAEAEA
+  position: relative
+
+.product-item__price-block
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  padding-left: 1.875rem
+  flex: 1 1 100%
+.product-item__photo
+  background-size: contain
+  background-position: center
+  background-repeat: no-repeat
+  right: 10px!important
+  left: 10px!important
+  bottom: 10px!important
+  top: 10px!important
+  width: auto!important
+  height: auto!important
+.product-item__amount
+  input, .minus, .plus
+    width: 2.625rem
+    height: 2.625rem
+    border: none
+    font-weight: 500
+    font-family: 'rubik'
+    transition: .4s ease
+  .minus, .plus
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    color: #fff
+    background-color: $text
+    &:hover
+      background-color: $yellow
+      color: $text
+  #amount
+    width: 54px
+    background-color: #ECECEC
+    margin: 0 2px
+    text-align: center
+.product-item__desc
+  margin-left: 30px
+  min-width: 320px
+.recommended-item__btn-container.product-item__btn-container
+  transform: none
+  align-items: flex-end
+  flex-direction: column
+  .btn
+    margin-bottom: 0.75rem
+  .product-item__price
+    line-height: 1.2
+
+.product-list--bar
+  margin: 0 -10px
+  .product-item 
+    width: 33.33333%
+    flex: 0 0 33.3333%
+    padding: 10px
+  .product-item--container
+    padding: 2.8125rem 1.875rem
+    flex-direction: column
+    align-items: flex-start
+    position: relative
+    box-shadow: 0px 0px 14px rgba(36, 40, 58, 0.1)
+  .product-item__photo-wrapper
+    align-self: center
+    max-width: 13.125rem
+    border: none
+    position: static
+    &:before
+      left: 10px
+      top: 10px
+  .product-item__desc
+    margin: 0
+  .product-item__price-block
+    flex-wrap: wrap
+    padding-left: 0
+  .recommended-item__btn-container
+    flex-direction: row
+    align-items: center
+    .recommended-item__btn-text
+      margin-bottom: 10px
+      margin-left: 1.875rem
+  .promo-banner
+    padding: 0 10px
+    background-position: 10px center
+    background-color: transparent
+    width: calc(100% - 10px)
+    &:before
+      display: none
+.promo-banner
+  background-color: $text
+  background-image: url(../img/content/banner.jpg)
+  background-repeat: no-repeat
+  margin: 20px 0
+  position: relative
+  width: 100%
+  &:before
+    content: ''
+    position: absolute
+    bottom: -20px
+    height: 1px
+    width: 100%
+    left: 0
+    background: #ECECEC
+  &__title
+    max-width: 50rem
+    padding-bottom: 1.0625rem
+  &__content
+    padding: 3.75rem
+    background: linear-gradient(90deg, #000000 -1.13%, rgba(0, 0, 0, 0) 95.6%)
+  &__text
+    max-width: 21.875rem
+    padding-bottom: 26px
+
+
+.product-card--container
+  .product-item__desc
+    margin-left: 0
+  dd 
+    border-bottom: 1px solid #ececec
+  .product-item__price-block
+    flex-direction: column
+    justify-content: center
+    align-items: flex-end
+    padding-right: 3.125rem
+  .card-photo
+    height: 28.75rem
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    margin: 0 1.875rem 1.875rem
+.product-body
+  display: flex
+  border-bottom: 1px solid #ececec
+  padding-bottom: 2.5rem
+  justify-content: space-between
+.product-footer
+  padding-top: 1.5625rem
+
+
+//Модули
+@import modules/modules
+@import media

@@ -1,0 +1,25 @@
+@import '../../vars'
+.link
+  color: inherit
+  &:hover
+    color: $red
+    text-decoration: none
+    transition: .3s ease
+.link.link-accent
+  color: inherit
+  &:hover
+    color: $yellow
+    text-decoration: none
+    transition: .3s ease
+
+.breadcrumb
+  padding-top: 2.1875rem
+  background-color: transparent
+  color: text
+.breadcrumb-item + .breadcrumb-item::before
+  content: '>'
+  font-size: 14px
+.breadcrumb-item
+  text-decoration: underline
+.breadcrumb-item.active
+  text-decoration: none

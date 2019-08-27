@@ -1,0 +1,49 @@
+@import '../../vars'
+
+footer 
+  flex: 0 0 auto
+  background-color: $text
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    opacity: 0.3
+    background-image: url(../img/general/bg-dark.png)
+    background-color: $text
+.footer-body
+  padding: 5rem 0
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    left: 15px
+    right: 15px
+    height: 2px
+    bottom: 0
+    background-color: #fff
+.footer-icon
+  width: 17px
+  height: 17px
+  margin-top: 0.375rem
+  fill: $red
+.footer-social-item__insta
+  margin-right: 27px
+.footer-social-item
+  width: 51px
+  height: 51px
+  fill: white
+  transition: .3s ease
+  cursor: pointer
+  &:hover
+    fill: $red
+.link-mail
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+.footer-copyright
+  position: relative
+  z-index: 100

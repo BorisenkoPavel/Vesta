@@ -1,0 +1,292 @@
+@import '../../vars'
+
+.header, .header-fixed
+  background-color: $text
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    opacity: 0.3
+    background-image: url(../img/general/bg-dark.png)
+    background-position: center
+    pointer-events: none
+
+.header__top
+  background-color: #fff
+  justify-content: space-between
+  position: relative
+  &:before
+    pointer-events: none
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    opacity: 0.3
+    background-image: url(../img/general/bg-light.png)
+    background-position: center
+.header__nav
+  width: 100%
+  max-width: 546px
+.header__phone
+  font-weight: 500
+  font-family: 'rubik'
+  font-size: 1.25rem
+.callback
+  font-size: 14px
+  &:hover
+    .callback-text
+      border-bottom: 1px dashed $text!important
+.callback-text
+  border-bottom: 1px dashed #fff
+  text-transform: none
+.header__search
+  flex: 1 1
+  label
+    width: 100%
+    position: relative
+  input
+    height: 50px
+    width: 100%
+    border: none
+.icon-logo
+  width: 173px
+  max-width: 100%
+  height: 55px
+.icon-loop, .header__logo
+  fill: #fff
+.icon-loop
+  width: 53px
+  top: 0
+  stroke: black
+  z-index: 40
+  position: absolute
+  bottom: 0
+  margin: auto
+  right: 10px
+.menu-toggle
+  position: absolute
+  visibility: hidden
+.menu-btn.active
+  background-color: $text
+.menu-btn
+  max-width: 10.75rem
+  display: flex
+  align-items: center
+  background: $red
+  cursor: pointer
+  transition: .3s ease
+  width: 100%
+  svg
+    transition: .3s ease
+.hamburger
+  padding-bottom: 8px
+.header-menu
+  position: absolute
+  left: 0
+  right: 0
+  background-color: $text
+  top: 100%
+  padding: 5.625rem 0
+  transition: .3s ease
+  transform: scaley(0)
+  transform-origin: top
+  z-index: 900
+.header-menu__list, .footer-menu__list
+  li
+    margin-bottom: 0.625rem
+.header-menu__block
+  opacity: 0
+  transform: translatey(-100px)
+  transition: .5s ease
+  transition-delay: .3s
+[id='menu-toggle']:checked ~ .header-menu
+  transform: scaley(1) 
+  .header-menu__block
+    opacity: 1
+    transform: translate(0)
+[id='menu-toggle']:checked ~ svg
+  transform: rotate(180deg)
+.border-animation 
+  --border-width: 0.2em
+  --animation-speed: 1s
+  --color: #E30D26
+  color: var(--color)
+  position: relative
+  display: inline-block
+  transform: scale(1, 0.8)
+  border: var(--border-width) solid transparent
+  
+  .border-animation__inner 
+    position: relative
+    display: inline-block
+    width: 100%
+    font-family: 'Six Caps', sans-serif
+    font-weight: 300
+    text-transform: uppercase
+    letter-spacing: 0.05em
+    cursor: pointer
+    padding: 0.2em 10px
+    z-index: 1
+    border: solid var(--border-width) transparent
+  
+
+  &:before,
+  &:after 
+    content: ''
+    position: absolute
+    background: var(--color)
+
+  &:focus:before,
+  &:hover:before 
+    animation: beforeBorders var(--animation-speed) forwards ease-in-out
+
+  &:focus:after,
+  &:hover:after 
+    animation: afterBorders var(--animation-speed) forwards ease-in-out
+  
+  
+  &:focus,
+  &:hover 
+    animation: borderColors var(--animation-speed) steps(1) forwards
+    outline: none
+
+    .border-animation__inner 
+      // animation: background calc(var(--animation-speed) / 5 * 3) forwards ease-in-out
+      animation-delay: calc(var(--animation-speed) / 5 * 2)
+
+@keyframes beforeBorders 
+  0% 
+    top: calc(var(--border-width) * -1)
+    left: 50%
+    bottom: auto
+    right: auto
+    width: 0
+    height: var(--border-width)
+  
+  33%     
+    top: calc(var(--border-width) * -1)
+    left: calc(var(--border-width) * -1)
+    bottom: auto
+    right: auto
+    width: calc(var(--border-width) + 50%)
+    height: var(--border-width)
+  
+  66% 
+    top: calc(var(--border-width) * -1)
+    left: calc(var(--border-width) * -1)
+    bottom: auto
+    right: auto
+    width: var(--border-width)
+    height: calc((var(--border-width) * 2) + 100%)
+  
+  100% 
+    top: auto
+    left: calc(var(--border-width) * -1)
+    bottom: calc(var(--border-width) * -1)
+    right: auto
+    width: calc(var(--border-width) + 50%)
+    height: calc((var(--border-width) * 2) + 100%)
+
+@keyframes afterBorders 
+  0% 
+    top: calc(var(--border-width) * -1)
+    left: auto
+    bottom: auto
+    right: 50%
+    width: 0
+    height: var(--border-width)
+  
+  33%     
+    top: calc(var(--border-width) * -1)
+    left: auto
+    bottom: auto
+    right: calc(var(--border-width) * -1)
+    width: calc(var(--border-width) + 50%)
+    height: var(--border-width)
+  
+  66% 
+    top: calc(var(--border-width) * -1)
+    left: auto
+    bottom: auto
+    right: calc(var(--border-width) * -1)
+    width: var(--border-width)
+    height: calc((var(--border-width) * 2) + 100%)
+  
+  100% 
+    top: auto
+    left: auto
+    bottom: calc(var(--border-width) * -1)
+    right: calc(var(--border-width) * -1)
+    width: calc(var(--border-width) + 50%)
+    height: calc((var(--border-width) * 2) + 100%)
+  
+
+
+@keyframes borderColors 
+  0% 
+    border-top-color: transparent
+    border-right-color: transparent
+    border-bottom-color: transparent
+    border-left-color: transparent
+  
+  33% 
+    border-top-color: var(--color)
+    border-right-color: transparent
+    border-bottom-color: transparent
+    border-left-color: transparent
+
+  
+  66% 
+    border-top-color: var(--color)
+    border-right-color: var(--color)
+    border-bottom-color: transparent
+    border-left-color: var(--color)
+  
+  100% 
+    border-top-color: var(--color)
+    border-right-color: var(--color)
+    border-bottom-color: var(--color)
+    border-left-color: var(--color)
+  
+
+
+@keyframes background 
+  to 
+    background: #fff
+
+
+@media (min-width: 850px) 
+  body 
+    justify-content: center
+
+
+.header-fixed.fixed
+  position: fixed
+  top: 0
+.header-fixed
+  position: absolute
+  transition: 1s ease
+  top: -200%
+  right: 0
+  left: 0
+  margin: auto
+  z-index: 900
+  .header-menu
+    top: 100%
+  .header__search
+    input
+      background-color: #282C37
+      color: #fff
+    .icon-loop
+      fill: transparent
+      stroke: white
+  .header__body
+    .container
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+  .menu-btn
+    background-color: transparent

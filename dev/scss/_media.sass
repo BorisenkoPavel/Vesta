@@ -1,0 +1,157 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1400px
++media-breakpoint-down(xl)
+  .subtitle 
+    font-size: 0.75rem
+  .text-big
+    font-size: 1.25rem
+  .banner-slider .swiper-button-next, .banner-slider .swiper-button-prev
+    width: 63px
+    height: 63px
+  .banner-slider .swiper-button-next
+    right: 1%
+  .banner-slider .swiper-button-prev
+    left: 1%
+  .about-us__content
+    .embed-responsive.embed-responsive-4by3
+      &:before
+        padding-top: 100%
+  .menu-btn
+    max-width: auto
+    padding-right: 15px
+    width: auto
+  .banner-slider
+    .embed-responsive-21by9::before 
+      padding-top: 55%
+  .product-list--bar .product-item--container 
+    padding: 2.8125rem 1.575rem
+// ≥1200px
++media-breakpoint-down(lg)
+  .product-list--bar .recommended-item__btn-container .recommended-item__btn-text
+    white-space: nowrap
+  .recommended-item__btn 
+    margin-right: .5rem!important
+  .recommended-item-price
+    margin-right: 10px
+    white-space: nowrap
+  .product-list--bar .recommended-item__btn-container
+    flex-direction: column
+    align-items: flex-start
+    .recommended-item__btn-text
+      margin: 0
+  .product-item__amount
+    margin-bottom: 1.25rem
+  .product-card--container .product-item__price-block
+    padding: 0
+    align-items: flex-start
+    flex: 1 1
+// ≥992px
++media-breakpoint-down(md)
+  .subtitle
+    font-size: 0.9rem
+  .header__body
+    display: none
+  .menu-btn
+    & > .subtitle
+      display: none
+    & > svg
+      display: none
+    padding-right: 0
+    background-color: transparent
+    & ~ .header__logo
+      .icon-logo
+        max-width: 8.125rem
+  .swiper-button-prev, .swiper-button-next
+    display: none
+  .section-recommended .recommended-slider--bottom .big-slide, .section-recommended .recommended-slider--top .big-slide
+    max-width: 100%
+  .section-advantages .section-title
+    margin-bottom: 3rem
+  .banner-slider
+    .embed-responsive-21by9::before 
+      padding-top: 60%
+  .banner-slide__content
+    padding-top: 2rem
+  .section-advantages
+    padding: 4.0625rem 0
+  .hamburger
+    padding-left: 0
+  .header__body--right-block
+    justify-content: flex-end!important
+  .header-menu__block
+    margin-bottom: 2rem
+  .sorting-title.sorting-title--view
+    display: none!important
+  .product-list--bar .product-item
+    width: 50%
+    flex: 0 0 50%
+  .product-item__desc
+    min-width: auto
+  .product-card--container .product-item__price-block
+    flex: 0 0
+// ≥768px
++media-breakpoint-down(sm)
+  .banner-slider
+    .embed-responsive-21by9::before 
+      padding-top: 75%
+  .header__top
+    display: none
+  section, .section-advantages, .section-about-us, .section-about-us, .footer-body, .header-menu
+    padding: 3.0625rem 0
+  .product-list--bar .product-item
+    width: 100%
+    flex: 0 0 100%
+  .product-item__price-block
+    flex-direction: column
+    flex: 0 0
+
+// ≥576px
++media-breakpoint-down(xs)
+  .banner-slider
+    .embed-responsive-21by9::before 
+      padding-top: 130%
+  .advantage-item--w
+    width: 75%
+  .header-menu__block
+    margin-bottom: 0
+  .header-menu__list 
+    padding-bottom: 2rem
+    display: none
+  .section-title
+    align-items: flex-start
+    margin-bottom: 2.375rem
+    flex-direction: column
+    &:before
+      display: none
+  .section-title-btn
+    margin-top: 1rem
+  .banner-slide:before
+    background: linear-gradient(180deg,#1a2040 0,rgba(0,0,0,0) 95.81%),linear-gradient(90deg,#15162d 0,rgba(0,0,0,0) 73.41%)
+  .section-catalog
+    padding-bottom: 0
+  .section-reviews
+    padding-bottom: 4.0625rem
+  .promo-banner__content
+    padding: 2.75rem 1.5rem
+  .product-body
+    flex-direction: column
+    padding-bottom: 1rem
+  .product-footer
+    padding-top: 1rem
+/*==========  mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

@@ -12,34 +12,34 @@ block content
         .filtr-text.pr-3 ФИЛЬТР
         a(href="#").link.filtr-reset Сбросить 
       .filtr-list.row
-        .filtr-item.col-2
+        .filtr-item.col-6.col-md-4.col-lg-2.mb-2.mb-lg-0
           .filtr-item__title Страна производитель
           select.form-control.form-control-sm.input-height
             option 
             option Фритюрницы
             option Фритюрницы
-        .filtr-item.col-2
+        .filtr-item.col-6.col-md-4.col-lg-2.mb-2.mb-lg-0
           .filtr-item__title Спецпредложение
           select.form-control.form-control-sm.input-height
             option 
             option Фритюрницы
             option Фритюрницы
-        .filtr-item.col-2
+        .filtr-item.col-6.col-md-4.col-lg-2.mb-2.mb-lg-0
           .filtr-item__title Мощность
           select.form-control.form-control-sm.input-height
             option 
             option Фритюрницы
             option Фритюрницы
-        .filtr-item.col-2
+        .filtr-item.col-6.col-md-4.col-lg-2.mb-2.mb-lg-0
           .filtr-item__title Количество ванн
           select.form-control.form-control-sm.input-height
             option 
             option Фритюрницы
             option Фритюрницы
-        .filtr-item.col-2
+        .filtr-item.col-6.col-md-4.col-lg-2
           .filtr-item__title Цена, ₽
             input(type="text" class="js-range-slider" name="my_range" value="" data-type="double" data-min="0" data-max="1000" data-from="200" data-to="500" )
-        .filtr-item.col-2.d-flex.align-items-end
+        .filtr-item.col-6.col-md-4.col-lg-2.d-flex.align-items-end
          .btn.input-height Применить
     .sorting-block
       .sorting-title.d-inline-block сортировать по:
@@ -49,11 +49,11 @@ block content
       a(href="#").link.mr-4
         +icon('sorting')
         span.link-dashed.ml-2 названию A-Я
-      .sorting-title.d-inline-block.ml-5 вид:
+      .sorting-title.sorting-title--view.d-inline-block.ml-5 вид:
         a(href="#").ml-2.link
-          +icon('stroke', 'sorting-icon active')
+          +icon('stroke', 'sorting-icon')
         a(href="#").ml-3.link
-          +icon('bar', 'sorting-icon')
+          +icon('bar', 'sorting-icon active')
     section.section-product-list
       .row.no-gutters.product-list
  
@@ -61,7 +61,7 @@ block content
           .product-item--container
             .product-item__photo-wrapper.active
               .embed-responsive.embed-responsive-1by1
-                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(img/content/rec.png)'})
             .product-item__desc
               dl
                 dt.product-item__title.text-big Фритюрница ERGO EF-061
@@ -83,7 +83,7 @@ block content
           .product-item--container
             .product-item__photo-wrapper
               .embed-responsive.embed-responsive-1by1
-                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(img/content/rec.png)'})
             .product-item__desc
               dl
                 dt.product-item__title.text-big Фритюрница ERGO EF-061
@@ -105,7 +105,7 @@ block content
           .product-item--container
             .product-item__photo-wrapper
               .embed-responsive.embed-responsive-1by1
-                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(img/content/rec.png)'})
             .product-item__desc
               dl
                 dt.product-item__title.text-big Фритюрница ERGO EF-061
@@ -132,7 +132,7 @@ block content
           .product-item--container
             .product-item__photo-wrapper
               .embed-responsive.embed-responsive-1by1
-                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(img/content/rec.png)'})
             .product-item__desc
               dl
                 dt.product-item__title.text-big Фритюрница ERGO EF-061
@@ -154,7 +154,7 @@ block content
           .product-item--container
             .product-item__photo-wrapper
               .embed-responsive.embed-responsive-1by1
-                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(img/content/rec.png)'})
             .product-item__desc
               dl
                 dt.product-item__title.text-big Фритюрница ERGO EF-061
@@ -176,7 +176,7 @@ block content
           .product-item--container
             .product-item__photo-wrapper
               .embed-responsive.embed-responsive-1by1
-                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(img/content/rec.png)'})
             .product-item__desc
               dl
                 dt.product-item__title.text-big Фритюрница ERGO EF-061
@@ -198,7 +198,7 @@ block content
           .product-item--container
             .product-item__photo-wrapper
               .embed-responsive.embed-responsive-1by1
-                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(static/images/content/rec.png)'})
+                  .embed-responsive-item.product-item__photo(style={'background-image': 'url(img/content/rec.png)'})
             .product-item__desc
               dl
                 dt.product-item__title.text-big Фритюрница ERGO EF-061

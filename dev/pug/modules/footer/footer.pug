@@ -1,7 +1,7 @@
 footer.footer.text-white
   .container
     .row.footer-body
-      .col-3
+      .col-12.col-sm-6.col-md-5.col-lg-3.mb-4.mb-sm-0
         .footer-menu__title.text-big.mb-4 Каталог
         ul.footer-menu__list
           li
@@ -16,7 +16,7 @@ footer.footer.text-white
             a(href="#").link.link-accent Ремонт
           li
             a(href="#").link.link-accent Обслуживанине
-      .col-3
+      .col-12.col-sm-6.col-md-4.col-lg-3
         .footer-menu__title.text-big.mb-4 О компании
         ul.footer-menu__list
           li
@@ -27,7 +27,7 @@ footer.footer.text-white
             a(href="#").link.link-accent Контакты
           li
             a(href="#").link.link-accent Отзывы
-      .col-3
+      .col-6.col-lg-4.col-xl-3.d-none.d-lg-block
         ul
           li.footer-contact-item.pb-3
             a.link.d-flex.align-items-center(href="tel:+73882261122")
@@ -37,7 +37,7 @@ footer.footer.text-white
             a.link.d-flex.align-items-center(href="mailto:info@vesta-horeca.ru")
               +icon('mail-footer', 'footer-icon')
               span.link-mail.text-big.font-weight-bold.ml-3 info@vesta-horeca.ru
-      .col-3
+      .col-3.col-md-2.col-xl-3.d-none.d-md-block
         .footer-social.d-flex.pt-2
           .footer-social-item.footer-social-item__insta
             +icon('instagram', 'footer-social')
@@ -45,6 +45,6 @@ footer.footer.text-white
             +icon('vk', 'footer-social')
     .footer-copyright.d-flex.justify-content-between.py-3
       .company 
-        a(href="").link © Веста, 2019
+        a(href="#").link © Веста, 2019
       .dev
-        a(href="").link Разработка сайта - E1MEDIA
+        a(href="#").link Разработка сайта - E1MEDIA
